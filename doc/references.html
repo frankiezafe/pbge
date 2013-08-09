@@ -1,0 +1,1786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta
+	http-equiv="Content-Type"
+	content="text/html; charset=UTF-8">
+<title>Processing BGE library references</title>
+<style type="text/css">
+html {
+	font-family: sans-serif;
+	font-size: 11px;
+	color: #777;
+}
+
+a {
+	color: #0cc;
+}
+
+a:visited {
+	color: #09c;
+}
+
+h1,h2 { font-weight: normal; }
+
+.methods_summary {
+	float: left;
+	display: block;
+	width: 100%;
+}
+
+.methods_summary div {
+	float: left;
+	display: block;
+	width: 180px;
+	margin: 0 10px 5px 0;
+}
+
+.methods_summary .method_section {
+	font-weight: bold;
+	margin: 10px 0 5px 0;
+}
+
+.methods_list {
+	float: left;
+	display: block;
+	clear: both;
+}
+.methods_list .method {
+	padding: 10px 0 10px 0;
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid #777;
+}
+.methods_list .method_public, .methods_list .method_private {
+	position: absolute;
+	margin: -15px 0 0 0;
+	background: #0f0;
+	padding: 2px;
+}
+.methods_list .method_private {
+	background: #ff0;
+}
+.methods_list .method_name {
+	background: #0ff;
+	padding: 3px;
+	font-size: 15px; color: #000;
+}
+.methods_list .method_arguments, .methods_list .method_return {
+	background: #ddd;
+	margin: 3px 0 0 0;
+	padding: 5px;
+	color: #000;
+}
+.methods_list .method_arguments:before,
+.methods_list .method_return:before,
+.methods_list .method_comments:before {
+	color: #777;
+	font-style: italic;
+	width: 100px;
+}
+.methods_list .method_arguments:before { content: "arguments: "; }
+.methods_list .method_return:before { content: "return: "; }
+.methods_list .method_comments:before { content: "comments: "; }
+
+.methods_list table { margin: 3px 0 0 0; padding: 0; border: 1 px solid #777; }
+.methods_list td { padding: 2px 5px; }
+.methods_list tr.arguments_header, .methods_list tr.arguments_header td {
+	background: #222;
+	color: #ddd;
+}
+
+.methods_list .method_comments {
+	margin: 3px 0 3px 0;
+}
+
+.methods_list .backtosummary {
+	text-align: right;
+}
+
+.methods_list .method_important {
+	color: #f00;
+}
+
+</style>
+</head>
+<body>
+
+<h1>ProcessingBGE references</h1>
+<p>
+Here below you will find the complete list of methods available in the library.<br/>
+Some of them accepts different sets of arguments, their position is very important when you use the methods.<br/>
+<br/>
+Some methods are flagged as <b>private</b>. Obviously, you can use them, but side effects may appears.<br/>
+Please check the code first if you want to use them.
+</p>
+
+	<!---------------->
+	<!-- START COPY -->
+	<!---------------->
+	
+	<!------------->
+	<!-- SUMMARY -->
+	<!------------->
+	
+	<div class="methods_summary">
+		<a name="methods_summary"></a>
+		<div class="summary_column">
+			<div class="method_section">basics</div>
+			<div class="method_anchor">
+				<a href="#__init__">__init__()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#isconfigured">isconfigured()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#configure">configure()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#locateTemplates">locateTemplates()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#update">update()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#inputs">inputs()</a>
+			</div>
+			<div class="method_section">interactions</div>
+			<div class="method_anchor">
+				<a href="#keyPressed">keyPressed()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#keyReleased">keyReleased()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#keyActive">keyActive()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#capsActive">capsActive()</a>
+			</div>
+		</div>
+		<div class="summary_column">
+			<div class="method_section">creation</div>
+			<div class="method_anchor">
+				<a href="#storeGeneratedRef">storeGeneratedRef()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#makeUnique">makeUnique()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createPlane">createPlane()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createCube">createCube()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createSphere">createSphere()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createEmpty">createEmpty()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createSpot">createSpot()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createCylinder">createCylinder()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createCircle">createCircle()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createSquare">createSquare()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createTriangle">createTriangle()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createFromTemplate">createFromTemplate()</a>
+			</div>
+			<div class="method_section">colors</div>
+			<div class="method_anchor">
+				<a href="#color">color()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#getColor">getColor()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#background">background()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#ambient">ambient()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#mist">mist()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#changeColor">changeColor()</a>
+			</div>
+		</div>
+		<div class="summary_column">
+			<div class="method_section">blender objects' getters</div>
+			<div class="method_anchor">
+				<a href="#orientation">orientation()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#position">position()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#dimension">dimension()</a>
+			</div>
+			<div class="method_section">environment setters</div>
+			<div class="method_anchor">
+				<a href="#enableVerbose">enableVerbose()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#disableVerbose">disableVerbose()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#showMouse">showMouse()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#hideMouse">hideMouse()</a>
+			</div>
+			<div class="method_section">delegates</div>
+			<div class="method_anchor">
+				<a href="#vector">vector()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#createOscReceiver">createOscReceiver()</a>
+			</div>
+			<div class="method_section">text</div>
+			<div class="method_anchor">
+				<a href="#textColor">textColor()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#textSize">textSize()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#text">text()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#info">info()</a>
+			</div>
+		</div>
+		<div class="summary_column">
+			<div class="method_section">basic draw</div>
+			<div class="method_anchor">
+				<a href="#lineColor">lineColor()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#line">line()</a>
+			</div>
+			<div class="method_section">transformations</div>
+			<div class="method_anchor">
+				<a href="#scale">scale()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#scaleX">scaleX()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#scaleY">scaleY()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#scaleZ">scaleZ()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#moveTo">moveTo()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#move">move()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#moveX">moveX()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#moveY">moveY()</a>
+			</div>
+			<div class="method_anchor">
+				<a href="#moveZ">moveZ()</a>
+			</div>
+		</div>
+	</div>
+
+	<!--------------------->
+	<!-- ALPHABETIC LIST -->
+	<!--------------------->
+
+<div class="methods_list">
+<div class="method">
+<a name="__init__"></a>
+<div class="method_public">public</div>
+<div class="method_name">__init__()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">constructor</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="ambient"></a>
+<div class="method_public">public</div>
+<div class="method_name">ambient()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the scene ambient color</div>
+<div class="method_important">NOT WORKING IN BGE</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="background"></a>
+<div class="method_public">public</div>
+<div class="method_name">background()</div>
+<div class="method_arguments">
+…
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the scene background color (see color() for arguments)</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="capsActive"></a>
+<div class="method_public">public</div>
+<div class="method_name">capsActive()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>char</td><td>char</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">boolean</div>
+<div class="method_comments">return true if cap key is currently pressed</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="changeColor"></a>
+<div class="method_public">public</div>
+<div class="method_name">changeColor()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o, …</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object color (see color() for arguments)</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o, …</td><td>string</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object color (see color() for arguments)</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="color"></a>
+<div class="method_public">public</div>
+<div class="method_name">color()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return black</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return white to black</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return white to black with transparency</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return rgb</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v4</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return rgb with transparency</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="configure"></a>
+<div class="method_public">public</div>
+<div class="method_name">configure()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">called one time once the game engine is started </div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>verbose</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">called one time once the game engine is started </div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createCircle"></a>
+<div class="method_public">public</div>
+<div class="method_name">createCircle()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createCube"></a>
+<div class="method_public">public</div>
+<div class="method_name">createCube()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createCylinder"></a>
+<div class="method_public">public</div>
+<div class="method_name">createCylinder()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createEmpty"></a>
+<div class="method_public">public</div>
+<div class="method_name">createEmpty()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createFromTemplate"></a>
+<div class="method_public">public</div>
+<div class="method_name">createFromTemplate()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>name</td><td>string</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>name</td><td>string</td><td>none</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>name</td><td>string</td><td>none</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createOscReceiver"></a>
+<div class="method_public">public</div>
+<div class="method_name">createOscReceiver()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>port</td><td>int</td><td>0</td></tr>
+<tr>
+<td>marker</td><td>string</td><td>'/pbge'</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">create a OSC receiver</div>
+<div class="method_important">NOT YET IMPLEMENTED</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createPlane"></a>
+<div class="method_public">public</div>
+<div class="method_name">createPlane()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createSphere"></a>
+<div class="method_public">public</div>
+<div class="method_name">createSphere()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createSpot"></a>
+<div class="method_public">public</div>
+<div class="method_name">createSpot()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createSquare"></a>
+<div class="method_public">public</div>
+<div class="method_name">createSquare()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="createTriangle"></a>
+<div class="method_public">public</div>
+<div class="method_name">createTriangle()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>0</td></tr>
+<tr>
+<td>y</td><td>number</td><td>0</td></tr>
+<tr>
+<td>z</td><td>number</td><td>0</td></tr>
+<tr>
+<td>time2live</td><td>number</td><td>0</td></tr>
+</table>
+</div>
+<div class="method_return">blender object</div>
+<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="dimension"></a>
+<div class="method_public">public</div>
+<div class="method_name">dimension()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">return 3D dimensions of the blender object</div>
+<div class="method_important">NOT YET IMPLEMENTED</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="disableVerbose"></a>
+<div class="method_public">public</div>
+<div class="method_name">disableVerbose()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">disable verbose mode</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="enableVerbose"></a>
+<div class="method_public">public</div>
+<div class="method_name">enableVerbose()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">enable verbose mode</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getColor"></a>
+<div class="method_public">public</div>
+<div class="method_name">getColor()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Color</div>
+<div class="method_comments">return blender object color; if no argument, return black</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="hideMouse"></a>
+<div class="method_public">public</div>
+<div class="method_name">hideMouse()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">hide mouse pointer when game engine is on</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="info"></a>
+<div class="method_public">public</div>
+<div class="method_name">info()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string relatively to viewport</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string relatively to viewport, first vector will be used to set the position </div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>number</td><td>none</td></tr>
+<tr>
+<td>y</td><td>number</td><td>none</td></tr>
+<tr>
+<td>z</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string relatively to viewport, arguments will be used to set the position</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="inputs"></a>
+<div class="method_private">private</div>
+<div class="method_name">inputs()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">called by update(), gather mouse and keyboard events</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="isconfigured"></a>
+<div class="method_public">public</div>
+<div class="method_name">isconfigured()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">boolean</div>
+<div class="method_comments">return true if object has been successfully configured</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="keyActive"></a>
+<div class="method_public">public</div>
+<div class="method_name">keyActive()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>char</td><td>char</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">boolean</div>
+<div class="method_comments">return true if key is currently pressed</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="keyPressed"></a>
+<div class="method_public">public</div>
+<div class="method_name">keyPressed()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>char</td><td>char</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">boolean</div>
+<div class="method_comments">return true if key has just been pressed</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="keyReleased"></a>
+<div class="method_public">public</div>
+<div class="method_name">keyReleased()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>char</td><td>char</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">boolean</div>
+<div class="method_comments">return true if key has just been released</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="line"></a>
+<div class="method_public">public</div>
+<div class="method_name">line()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+<tr>
+<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draws an opengl line between two positions</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+<tr>
+<td>arg2</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg3</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg4</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draws an opengl line between two positions (arg2 = x, arg3 = y, arg4 = z)  </div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg2</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg3</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg4</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg5</td><td>number</td><td>none</td></tr>
+<tr>
+<td>arg6</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draws an opengl line between two positions (arg1 = x, arg2 = y, arg3 = z and arg4 = x, arg5 = y, arg6 = z)  </div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="lineColor"></a>
+<div class="method_public">public</div>
+<div class="method_name">lineColor()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set rgb line color</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Color</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set line color</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set line color</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="locateTemplates"></a>
+<div class="method_private">private</div>
+<div class="method_name">locateTemplates()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">called by configure(), seek and load default and user defined objects</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="makeUnique"></a>
+<div class="method_private">private</div>
+<div class="method_name">makeUnique()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>name</td><td>string</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">string</div>
+<div class="method_comments">called by storeGeneratedRef(), generate a unique name and return it, returns 0 if name is already unique</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="mist"></a>
+<div class="method_public">public</div>
+<div class="method_name">mist()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the scene mist color</div>
+<div class="method_important">NOT WORKING IN BGE</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="move"></a>
+<div class="method_public">public</div>
+<div class="method_name">move()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>x</td><td>number</td><td>none</td></tr>
+<tr>
+<td>y</td><td>number</td><td>none</td></tr>
+<tr>
+<td>z</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object by x,y,z</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>x</td><td>number</td><td>none</td></tr>
+<tr>
+<td>y</td><td>number</td><td>none</td></tr>
+<tr>
+<td>z</td><td>number</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object by x,y,z using its local position if absolute is False</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="moveTo"></a>
+<div class="method_public">public</div>
+<div class="method_name">moveTo()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">move the blender object 'o' the location of the object 'arg1w'</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>number</td><td>none</td></tr>
+<tr>
+<td>y</td><td>number</td><td>none</td></tr>
+<tr>
+<td>z</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">move the blender object to the new position</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="moveX"></a>
+<div class="method_public">public</div>
+<div class="method_name">moveX()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on x axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on x axis using its local position if absolute is False</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="moveY"></a>
+<div class="method_public">public</div>
+<div class="method_name">moveY()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on y axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on y axis using its local position if absolute is False</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="moveZ"></a>
+<div class="method_public">public</div>
+<div class="method_name">moveZ()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on z axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">translate the blender object on z axis using its local position if absolute is False</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="orientation"></a>
+<div class="method_public">public</div>
+<div class="method_name">orientation()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">return global orientation of the blender object</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">return global (absolute) or local orientation of the blender object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="position"></a>
+<div class="method_public">public</div>
+<div class="method_name">position()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">return global position of the blender object</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>absolute</td><td>boolean</td><td>True</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">return global (absolute) or local position of the blender object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="scale"></a>
+<div class="method_public">public</div>
+<div class="method_name">scale()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object scale, uniform on the 3 axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>string</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object scale, uniform on the 3 axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+<tr>
+<td>optY</td><td>number</td><td>none</td></tr>
+<tr>
+<td>optZ</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object scale, differently on the 3 axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>string</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+<tr>
+<td>optY</td><td>number</td><td>none</td></tr>
+<tr>
+<td>optZ</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set the blender object scale, differently on the 3 axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="scaleX"></a>
+<div class="method_public">public</div>
+<div class="method_name">scaleX()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on X axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>string</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on X axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="scaleY"></a>
+<div class="method_public">public</div>
+<div class="method_name">scaleY()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on Y axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>string</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on Y axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="scaleZ"></a>
+<div class="method_public">public</div>
+<div class="method_name">scaleZ()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on Z axis</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>string</td><td>none</td></tr>
+<tr>
+<td>value</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">increase the blender object scale on Z axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="showMouse"></a>
+<div class="method_public">public</div>
+<div class="method_name">showMouse()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">show mouse pointer when game engine is on</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="storeGeneratedRef"></a>
+<div class="method_private">private</div>
+<div class="method_name">storeGeneratedRef()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>o</td><td>blender object</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">string</div>
+<div class="method_comments">store the relation between the unique name and the object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="text"></a>
+<div class="method_public">public</div>
+<div class="method_name">text()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string in the 3D world at 0,0,0</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+<tr>
+<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string in the 3D world, first vector will be used to set the position and second for rotation</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>text</td><td>string</td><td>none</td></tr>
+<tr>
+<td>arg1</td><td>blender object</td><td>none</td></tr>
+<tr>
+<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
+<tr>
+<td>arg3</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">draw a string in the 3D world, object position and first vector will be merged to set the position and second for rotation</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="textColor"></a>
+<div class="method_public">public</div>
+<div class="method_name">textColor()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td><td>range</td></tr>
+<tr>
+<td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr>
+<tr>
+<td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set rgb text color</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Color</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set text color</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set text color</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="textSize"></a>
+<div class="method_public">public</div>
+<div class="method_name">textSize()</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>size</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">set text size</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="update"></a>
+<div class="method_public">public</div>
+<div class="method_name">update()</div>
+<div class="method_arguments">
+-
+</div>
+<div class="method_return">-</div>
+<div class="method_comments">called at each refresh, the method gathers inputs events & OSC messages</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="vector"></a>
+<div class="method_public">public</div>
+<div class="method_name">vector()</div>
+<div class="method_arguments">
+
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">create a 3D vector at 0,0,0</div>
+<div class="method_arguments">
+<table>
+<tr class="arguments_header">
+<td>name</td><td>type</td><td>default</td></tr>
+<tr>
+<td>x</td><td>number</td><td>none</td></tr>
+<tr>
+<td>y</td><td>number</td><td>none</td></tr>
+<tr>
+<td>z</td><td>number</td><td>none</td></tr>
+</table>
+</div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">create a 3D vector</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+</div>
+
+
+	<!--------------->
+	<!-- STOP COPY -->
+	<!--------------->
+</body>
+</html>

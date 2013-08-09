@@ -1,0 +1,113 @@
+basics§§§§§§
+§public§__init__()§-§-§constructor§
+§public§isconfigured()§-§boolean§return true if object has been successfully configured§
+§public§configure()§§-§called one time once the game engine is started §
+§public§configure()§[boolean:True] verbose§-§called one time once the game engine is started §
+§private§locateTemplates()§-§-§called by configure(), seek and load default and user defined objects§
+§public§update()§-§-§called at each refresh, the method gathers inputs events & OSC messages§
+§private§inputs()§-§-§called by update(), gather mouse and keyboard events§
+interactions§§§§§§
+§public§keyPressed()§[char:none] char§boolean§return true if key has just been pressed§
+§public§keyReleased()§[char:none] char§boolean§return true if key has just been released§
+§public§keyActive()§[char:none] char§boolean§return true if key is currently pressed§
+§public§capsActive()§[char:none] char§boolean§return true if cap key is currently pressed§
+creation§§§§§§
+§private§storeGeneratedRef()§[blender object:none] o§string§store the relation between the unique name and the object§
+§private§makeUnique()§[string:none] name§string§called by storeGeneratedRef(), generate a unique name and return it, returns 0 if name is already unique§
+§public§createPlane()§§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
+§public§createPlane()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
+§public§createPlane()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
+§public§createCube()§§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
+§public§createCube()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
+§public§createCube()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
+§public§createSphere()§§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
+§public§createSphere()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
+§public§createSphere()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
+§public§createEmpty()§§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
+§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
+§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
+§public§createSpot()§§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
+§public§createSpot()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
+§public§createSpot()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
+§public§createCylinder()§§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
+§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
+§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
+§public§createCircle()§§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
+§public§createCircle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
+§public§createCircle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
+§public§createSquare()§§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
+§public§createSquare()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
+§public§createSquare()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
+§public§createTriangle()§§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
+§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
+§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
+§public§createFromTemplate()§[string:none] name§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
+§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
+§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
+colors§§§§§§
+§public§color()§§mathutils.Color§return black§
+§public§color()§[num:none|0,255] v1§mathutils.Color§return white to black§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2§mathutils.Color§return white to black with transparency§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§mathutils.Color§return rgb§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3; [num:none|0,255] v4§mathutils.Color§return rgb with transparency§
+§public§getColor()§[blender object:none] o§mathutils.Color§return blender object color; if no argument, return black§
+§public§background()§…§-§set the scene background color (see color() for arguments)§
+§public§ambient()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene ambient color§NOT WORKING IN BGE
+§public§mist()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene mist color§NOT WORKING IN BGE
+§public§changeColor()§[blender object:none] o, …§-§set the blender object color (see color() for arguments)§
+§public§changeColor()§[string:none] o, …§-§set the blender object color (see color() for arguments)§
+blender objects' getters§§§§§§
+§public§orientation()§[blender object:none] o§mathutils.Vector§return global orientation of the blender object§
+§public§orientation()§[blender object:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local orientation of the blender object§
+§public§position()§[blender object:none] o§mathutils.Vector§return global position of the blender object§
+§public§position()§[blender object:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local position of the blender object§
+§public§dimension()§[blender object:none] o§mathutils.Vector§return 3D dimensions of the blender object§NOT YET IMPLEMENTED
+environment setters§§§§§§
+§§§§§§
+§public§enableVerbose()§-§-§enable verbose mode§
+§public§disableVerbose()§-§-§disable verbose mode§
+§public§showMouse()§-§-§show mouse pointer when game engine is on§
+§public§hideMouse()§-§-§hide mouse pointer when game engine is on§
+delegates§§§§§§
+§public§vector()§§mathutils.Vector§create a 3D vector at 0,0,0§
+§public§vector()§[num:none] x; [num:none] y; [num:none] z§mathutils.Vector§create a 3D vector§
+§public§createOscReceiver()§[int:0] port; [string:'/pbge'] marker§-§create a OSC receiver§NOT YET IMPLEMENTED
+text§§§§§§
+§public§textColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb text color§
+§public§textColor()§[mathutils.Color:none] arg1§-§set text color§
+§public§textColor()§[mathutils.Vector:none] arg1§-§set text color§
+§public§textSize()§[num:none] size§-§set text size§
+§public§text()§[string:none] text§-§draw a string in the 3D world at 0,0,0§
+§public§text()§[string:none] text; [mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draw a string in the 3D world, first vector will be used to set the position and second for rotation§
+§public§text()§[string:none] text; [blender object:none] arg1; [mathutils.Vector:none] arg2; [mathutils.Vector:none] arg3§-§draw a string in the 3D world, object position and first vector will be merged to set the position and second for rotation§
+§public§info()§[string:none] text§-§draw a string relatively to viewport§
+§public§info()§[string:none] text; [mathutils.Vector:none] arg1§-§draw a string relatively to viewport, first vector will be used to set the position §
+§public§info()§[string:none] text; [num:none] arg1; [num:none] y; [num:none] z§-§draw a string relatively to viewport, arguments will be used to set the position§
+basic draw§§§§§§
+§public§lineColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb line color§
+§public§lineColor()§[mathutils.Color:none] arg1§-§set line color§
+§public§lineColor()§[mathutils.Vector:none] arg1§-§set line color§
+§public§line()§[mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draws an opengl line between two positions§
+§public§line()§[mathutils.Vector:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4§-§draws an opengl line between two positions (arg2 = x, arg3 = y, arg4 = z)  §
+§public§line()§[num:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4; [num:none] arg5; [num:none] arg6§-§draws an opengl line between two positions (arg1 = x, arg2 = y, arg3 = z and arg4 = x, arg5 = y, arg6 = z)  §
+transformations§§§§§§
+§public§scale()§[blender object:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§
+§public§scale()§[string:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§
+§public§scale()§[blender object:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§
+§public§scale()§[string:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§
+§public§scaleX()§[blender object:none] o; [num:none] value§-§increase the blender object scale on X axis§
+§public§scaleX()§[string:none] o; [num:none] value§-§increase the blender object scale on X axis§
+§public§scaleY()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Y axis§
+§public§scaleY()§[string:none] o; [num:none] value§-§increase the blender object scale on Y axis§
+§public§scaleZ()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Z axis§
+§public§scaleZ()§[string:none] o; [num:none] value§-§increase the blender object scale on Z axis§
+§public§moveTo()§[blender object:none] o; [blender object:none] arg1§-§move the blender object 'o' the location of the object 'arg1w'§
+§public§moveTo()§[blender object:none] o; [num:none] arg1; [num:none] y; [num:none] z§-§move the blender object to the new position§
+§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z§-§translate the blender object by x,y,z§
+§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z; [boolean:True] absolute§-§translate the blender object by x,y,z using its local position if absolute is False§
+§public§moveX()§[blender object:none] o; [num:none] value§-§translate the blender object on x axis§
+§public§moveX()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on x axis using its local position if absolute is False§
+§public§moveY()§[blender object:none] o; [num:none] value§-§translate the blender object on y axis§
+§public§moveY()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on y axis using its local position if absolute is False§
+§public§moveZ()§[blender object:none] o; [num:none] value§-§translate the blender object on z axis§
+§public§moveZ()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on z axis using its local position if absolute is False§
