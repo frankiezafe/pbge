@@ -1,0 +1,9 @@
+*~
+
+# Do not track temporary blender files 
+*.blend1
+*.blend2
+
+# Do not track eclipse files
+*.classpath
+*.project
