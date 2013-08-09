@@ -239,8 +239,29 @@ class ProcessingBGE(object):
 		# relative position of the mouse ( viewport )
 		self.mouseX = self.input_mouse.position[0]
 		self.mouseY = self.input_mouse.position[1]
+
 #TODO
-# buttons requires a SCA_MouseSensor! -> should be done before, @ instanciation or configuration
+# buttons requires a SCA_MouseSensor! -> should be done before, @ instanciation or configuration		
+		'''
+		lb = self.input_mouse.getButtonStatus( bge.events.LEFTMOUSE )
+		mb = self.input_mouse.getButtonStatus( bge.events.MIDDLEMOUSE )
+		rb = self.input_mouse.getButtonStatus( bge.events.RIGHTMOUSE )
+		if lb == bge.logic.KX_INPUT_NONE or lb == bge.logic.KX_INPUT_JUST_RELEASED: 
+			self.mouseLeft = False
+		else:
+			self.mouseLeft = True
+	
+		if mb == bge.logic.KX_INPUT_NONE or mb == bge.logic.KX_INPUT_JUST_RELEASED:
+			self.mouseMiddle = False
+		else:
+			self.mouseMiddle = True
+	
+		if rb == bge.logic.KX_INPUT_NONE or rb == bge.logic.KX_INPUT_JUST_RELEASED:
+			self.mouseRight = False
+		else:
+			self.mouseRight = True
+		'''
+
 		return True
 
 	
