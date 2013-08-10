@@ -71,7 +71,7 @@ public class HtmlMaker {
 			if ( line.length == 1 ) {
 				methodlists.add("<div class=\"method_section\">"+line[0]+"</div>");
 			} else {
-				String anchor = line[2].substring(0, line[2].length() - 2 );
+				String anchor = line[2].replace("(", "").replace(")", "").trim();
 				String ml = "<div class=\"method_anchor\"><a href=\"#"+anchor+"\">"+line[2]+"</a></div>";
 				if ( !methodlists.contains( ml ) ) {
 					methodlists.add( ml );
@@ -121,7 +121,7 @@ public class HtmlMaker {
 				if ( line[ 2 ].equals( alpham[ i ] ) ) {
 
 					if ( !started ) {
-						String anchor = line[2].substring(0, line[2].length() - 2 );
+						String anchor = line[2].replace("(", "").replace(")", "").trim();
 						pw.println( "<div class=\"method\">");
 						pw.println( "<a name=\""+anchor+"\"></a>");
 						pw.println( "<div class=\"method_"+line[1]+"\">"+line[1]+"</div>");
@@ -129,7 +129,8 @@ public class HtmlMaker {
 						started = true;
 					}
 
-					pw.println( "<div class=\"method_arguments\">");
+					if ( line[3].length() > 0 )
+						pw.print( "<div class=\"method_arguments\">");
 
 					// parsing arguments
 					String[] argus = line[3].split(";");
@@ -175,29 +176,35 @@ public class HtmlMaker {
 							rows.add( r );
 
 						}
-
-						pw.println( "<table>");
-						pw.println( "<tr class=\"arguments_header\">");
+						pw.print( "<table>");
+						pw.print( "<tr class=\"arguments_header\">");
 						for ( int h = 0; h < headings.size(); h++ )
 							pw.print( "<td>" + headings.get( h ) + "</td>" );
-						pw.println( "</tr>");
+						pw.print( "</tr>");
 						for ( int r = 0; r < rows.size(); r++ ) {
-							pw.println( "<tr>");
+							pw.print( "<tr>");
 							for ( int c = 0; c < rows.get( r ).size(); c++ ) {
 								pw.print( "<td>" + rows.get( r ).get(c) + "</td>" );
 							}
-							pw.println( "</tr>");
+							pw.print( "</tr>");
 						}
-						pw.println( "</table>");
+						pw.print( "</table>");
 
 
 					}
 
-					pw.println( "</div>");
-					pw.println( "<div class=\"method_return\">"+line[4]+"</div>");
+					if ( line[3].length() > 0 )
+						pw.println( "</div>");
+
+					if ( line[4].length() > 0 )
+						pw.println( "<div class=\"method_return\">"+line[4]+"</div>");
+
+					if ( line.length >= 7 && line[6].trim().length() > 0 ) {
+						pw.println( "<div class=\"method_example\">"+line[6]+"</div>");
+					}
 					pw.println( "<div class=\"method_comments\">"+line[5]+"</div>");
-					if ( line.length == 7 ) {
-						pw.println( "<div class=\"method_important\">"+line[6]+"</div>");
+					if ( line.length >= 8 ) {
+						pw.println( "<div class=\"method_important\">"+line[7]+"</div>");
 					}
 
 				} else {

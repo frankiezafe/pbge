@@ -1,113 +1,177 @@
-basics§§§§§§
-§public§__init__()§-§-§constructor§
-§public§isconfigured()§-§boolean§return true if object has been successfully configured§
-§public§configure()§§-§called one time once the game engine is started §
-§public§configure()§[boolean:True] verbose§-§called one time once the game engine is started §
-§private§locateTemplates()§-§-§called by configure(), seek and load default and user defined objects§
-§public§update()§-§-§called at each refresh, the method gathers inputs events & OSC messages§
-§private§inputs()§-§-§called by update(), gather mouse and keyboard events§
-interactions§§§§§§
-§public§keyPressed()§[char:none] char§boolean§return true if key has just been pressed§
-§public§keyReleased()§[char:none] char§boolean§return true if key has just been released§
-§public§keyActive()§[char:none] char§boolean§return true if key is currently pressed§
-§public§capsActive()§[char:none] char§boolean§return true if cap key is currently pressed§
-creation§§§§§§
-§private§storeGeneratedRef()§[blender object:none] o§string§store the relation between the unique name and the object§
-§private§makeUnique()§[string:none] name§string§called by storeGeneratedRef(), generate a unique name and return it, returns 0 if name is already unique§
-§public§createPlane()§§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
-§public§createPlane()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
-§public§createPlane()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new plane to the scene, returns 0 if the template is not found during configure§
-§public§createCube()§§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
-§public§createCube()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
-§public§createCube()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cube to the scene, returns 0 if the template is not found during configure§
-§public§createSphere()§§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
-§public§createSphere()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
-§public§createSphere()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new sphere to the scene, returns 0 if the template is not found during configure§
-§public§createEmpty()§§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
-§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
-§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new empty to the scene, returns 0 if the template is not found during configure§
-§public§createSpot()§§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
-§public§createSpot()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
-§public§createSpot()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new spot to the scene, returns 0 if the template is not found during configure§
-§public§createCylinder()§§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
-§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
-§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cylinder to the scene, returns 0 if the template is not found during configure§
-§public§createCircle()§§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
-§public§createCircle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
-§public§createCircle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new circle to the scene, returns 0 if the template is not found during configure§
-§public§createSquare()§§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
-§public§createSquare()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
-§public§createSquare()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new square to the scene, returns 0 if the template is not found during configure§
-§public§createTriangle()§§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
-§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
-§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new triangle to the scene, returns 0 if the template is not found during configure§
-§public§createFromTemplate()§[string:none] name§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
-§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
-§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new object to the scene, based on the name given, returns 0 if the template is not found during configure§
-colors§§§§§§
-§public§color()§§mathutils.Color§return black§
-§public§color()§[num:none|0,255] v1§mathutils.Color§return white to black§
-§public§color()§[num:none|0,255] v1; [num:none|0,255] v2§mathutils.Color§return white to black with transparency§
-§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§mathutils.Color§return rgb§
-§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3; [num:none|0,255] v4§mathutils.Color§return rgb with transparency§
-§public§getColor()§[blender object:none] o§mathutils.Color§return blender object color; if no argument, return black§
-§public§background()§…§-§set the scene background color (see color() for arguments)§
-§public§ambient()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene ambient color§NOT WORKING IN BGE
-§public§mist()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene mist color§NOT WORKING IN BGE
-§public§changeColor()§[blender object:none] o, …§-§set the blender object color (see color() for arguments)§
-§public§changeColor()§[string:none] o, …§-§set the blender object color (see color() for arguments)§
-blender objects' getters§§§§§§
-§public§orientation()§[blender object:none] o§mathutils.Vector§return global orientation of the blender object§
-§public§orientation()§[blender object:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local orientation of the blender object§
-§public§position()§[blender object:none] o§mathutils.Vector§return global position of the blender object§
-§public§position()§[blender object:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local position of the blender object§
-§public§dimension()§[blender object:none] o§mathutils.Vector§return 3D dimensions of the blender object§NOT YET IMPLEMENTED
-environment setters§§§§§§
-§§§§§§
-§public§enableVerbose()§-§-§enable verbose mode§
-§public§disableVerbose()§-§-§disable verbose mode§
-§public§showMouse()§-§-§show mouse pointer when game engine is on§
-§public§hideMouse()§-§-§hide mouse pointer when game engine is on§
-delegates§§§§§§
-§public§vector()§§mathutils.Vector§create a 3D vector at 0,0,0§
-§public§vector()§[num:none] x; [num:none] y; [num:none] z§mathutils.Vector§create a 3D vector§
-§public§createOscReceiver()§[int:0] port; [string:'/pbge'] marker§-§create a OSC receiver§NOT YET IMPLEMENTED
-text§§§§§§
-§public§textColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb text color§
-§public§textColor()§[mathutils.Color:none] arg1§-§set text color§
-§public§textColor()§[mathutils.Vector:none] arg1§-§set text color§
-§public§textSize()§[num:none] size§-§set text size§
-§public§text()§[string:none] text§-§draw a string in the 3D world at 0,0,0§
-§public§text()§[string:none] text; [mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draw a string in the 3D world, first vector will be used to set the position and second for rotation§
-§public§text()§[string:none] text; [blender object:none] arg1; [mathutils.Vector:none] arg2; [mathutils.Vector:none] arg3§-§draw a string in the 3D world, object position and first vector will be merged to set the position and second for rotation§
-§public§info()§[string:none] text§-§draw a string relatively to viewport§
-§public§info()§[string:none] text; [mathutils.Vector:none] arg1§-§draw a string relatively to viewport, first vector will be used to set the position §
-§public§info()§[string:none] text; [num:none] arg1; [num:none] y; [num:none] z§-§draw a string relatively to viewport, arguments will be used to set the position§
-basic draw§§§§§§
-§public§lineColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb line color§
-§public§lineColor()§[mathutils.Color:none] arg1§-§set line color§
-§public§lineColor()§[mathutils.Vector:none] arg1§-§set line color§
-§public§line()§[mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draws an opengl line between two positions§
-§public§line()§[mathutils.Vector:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4§-§draws an opengl line between two positions (arg2 = x, arg3 = y, arg4 = z)  §
-§public§line()§[num:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4; [num:none] arg5; [num:none] arg6§-§draws an opengl line between two positions (arg1 = x, arg2 = y, arg3 = z and arg4 = x, arg5 = y, arg6 = z)  §
-transformations§§§§§§
-§public§scale()§[blender object:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§
-§public§scale()§[string:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§
-§public§scale()§[blender object:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§
-§public§scale()§[string:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§
-§public§scaleX()§[blender object:none] o; [num:none] value§-§increase the blender object scale on X axis§
-§public§scaleX()§[string:none] o; [num:none] value§-§increase the blender object scale on X axis§
-§public§scaleY()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Y axis§
-§public§scaleY()§[string:none] o; [num:none] value§-§increase the blender object scale on Y axis§
-§public§scaleZ()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Z axis§
-§public§scaleZ()§[string:none] o; [num:none] value§-§increase the blender object scale on Z axis§
-§public§moveTo()§[blender object:none] o; [blender object:none] arg1§-§move the blender object 'o' the location of the object 'arg1w'§
-§public§moveTo()§[blender object:none] o; [num:none] arg1; [num:none] y; [num:none] z§-§move the blender object to the new position§
-§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z§-§translate the blender object by x,y,z§
-§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z; [boolean:True] absolute§-§translate the blender object by x,y,z using its local position if absolute is False§
-§public§moveX()§[blender object:none] o; [num:none] value§-§translate the blender object on x axis§
-§public§moveX()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on x axis using its local position if absolute is False§
-§public§moveY()§[blender object:none] o; [num:none] value§-§translate the blender object on y axis§
-§public§moveY()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on y axis using its local position if absolute is False§
-§public§moveZ()§[blender object:none] o; [num:none] value§-§translate the blender object on z axis§
-§public§moveZ()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on z axis using its local position if absolute is False§
+core§§§§§§§
+§private§__init__()§-§-§constructor§§
+§private§locateTemplates()§-§-§called by configure(), seek and load default and user defined objects§§
+§private§inputs()§-§-§called by update(), gather mouse and keyboard events§§
+§private§storeGeneratedRef()§[blender object:none] o§string§store the relation between the unique name and the object§pbge.storeGeneratedRef( mycopiedobject )§
+§private§makeUnique()§[string:none] name§string§called by storeGeneratedRef(), generate a unique name and return it, returns 0 if name is already unique§pbge.makeUnique( 'objectname' )§
+globals§§§§§§§
+§public§PI§§§the number PI§pbge.PI§
+§public§HALF_PI§§§half of PI§pbge.HALF_PI§
+§public§TWO_PI§§§two times PI§pbge.TWO_PI§
+§public§ARROW_UP§§§the arrow up char§if ( pbge.keyActive( pbge.ARROW_UP ) ):§
+§public§ARROW_RIGHT§§§the arrow right char§if ( pbge.keyActive( pbge.ARROW_RIGHT ) ):§
+§public§ARROW_DOWN§§§the arrow down char§if ( pbge.keyActive( pbge.ARROW_DOWN ) ):§
+§public§ARROW_LEFT§§§the arrow left char§if ( pbge.keyActive( pbge.ARROW_LEFT ) ):§
+§public§width§§§viewport width§pbge.width§
+§public§height§§§viewport height§pbge.height§
+§public§framecount§§§number of frames since the game started§pbge.framecount§
+§public§mouseX§§§x position of the mouse relative to viewport ( normalized )§pbge.mouseX§
+§public§mouseY§§§y position of the mouse relative to viewport ( normalized )§pbge.mouseY§
+§public§scene§§§reference of the current blender scene§pbge.scene§
+§public§templates§§§list of template objects, containing the models that will be used by all “create*” methods§§
+basics§§§§§§§
+§public§isconfigured()§-§boolean§return true if object has been successfully configured§if ( pbge.isconfigured() ):§
+§public§configure()§§-§called one time once the game engine is started §§
+§public§configure()§[boolean:True] verbose§-§called one time once the game engine is started §pbge.configure( False )§
+§public§update()§-§-§called at each refresh, the method gathers inputs events & OSC messages§§
+§public§enableVerbose()§-§-§enable verbose mode§§
+§public§disableVerbose()§-§-§disable verbose mode§§
+§public§showMouse()§-§-§show mouse pointer when game engine is on§§
+§public§hideMouse()§-§-§hide mouse pointer when game engine is on§§
+interactions§§§§§§§
+§public§keyPressed()§[char:none] char§boolean§return true if key has just been pressed§if ( pbge.keyPressed( 'a' ) ):§
+§public§keyReleased()§[char:none] char§boolean§return true if key has just been released§if ( pbge.keyReleased( 'a' ) ):§
+§public§keyActive()§[char:none] char§boolean§return true if key is currently pressed§if ( pbge.keyActive( 'a' ) ):§
+§public§capsActive()§-§boolean§return true if cap key is currently pressed§if ( pbge.capsActive() ):§
+creation§§§§§§§
+§public§createPlane()§§blender object§add a new plane to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createPlane()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new plane to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createPlane( -1.2, -0.5, 1 )§
+§public§createPlane()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new plane to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createPlane( -1.2, -0.5, 1, 300 )§
+§public§createCube()§§blender object§add a new cube to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createCube()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cube to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createCube( -1.2, -0.5, 1 )§
+§public§createCube()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cube to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createCube( -1.2, -0.5, 1, 300 )§
+§public§createSphere()§§blender object§add a new sphere to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createSphere()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new sphere to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createSphere( -1.2, -0.5, 1 )§
+§public§createSphere()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new sphere to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createSphere( -1.2, -0.5, 1, 300 )§
+§public§createEmpty()§§blender object§add a new empty to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new empty to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createEmpty( -1.2, -0.5, 1 )§
+§public§createEmpty()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new empty to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createEmpty( -1.2, -0.5, 1, 300 )§
+§public§createSpot()§§blender object§add a new spotlight to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createSpot()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new spotlight to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createSpot( -1.2, -0.5, 1 )§
+§public§createSpot()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new spotlight to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createSpot( -1.2, -0.5, 1, 300 )§
+§public§createCylinder()§§blender object§add a new cylinder to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new cylinder to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createCylinder( -1.2, -0.5, 1 )§
+§public§createCylinder()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new cylinder to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createCylinder( -1.2, -0.5, 1, 300 )§
+§public§createCircle()§§blender object§add a new circle to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createCircle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new circle to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createCircle( -1.2, -0.5, 1 )§
+§public§createCircle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new circle to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createCircle( -1.2, -0.5, 1, 300 )§
+§public§createSquare()§§blender object§add a new square to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createSquare()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new square to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createSquare( -1.2, -0.5, 1 )§
+§public§createSquare()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new square to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createSquare( -1.2, -0.5, 1, 300 )§
+§public§createTriangle()§§blender object§add a new triangle to the scene at position (0,0,0), returns 0 if the template is not found during configure§§
+§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z§blender object§add a new triangle to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createTriangle( -1.2, -0.5, 1 )§
+§public§createTriangle()§[num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new triangle to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createTriangle( -1.2, -0.5, 1, 300 )§
+§public§createFromTemplate()§[string:none] name§blender object§add a new object based on the specified template to the scene at position (0,0,0), returns 0 if the template is not found during configure§pbge.createFromTemplate( “mytemplateobject” )§
+§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z§blender object§add a new object based on the specified template to the scene at position (x,y,z), returns 0 if the template is not found during configure§pbge.createFromTemplate( “mytemplateobject”, -1.2, -0.5, 1 )§
+§public§createFromTemplate()§[string:none] name; [num:0] x; [num:0] y; [num:0] z; [num:0] time2live§blender object§add a new object based on the specified template to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure§pbge.createFromTemplate( “mytemplateobject”, -1.2, -0.5, 1, 300 )§
+colors§§§§§§§
+§public§color()§§mathutils.Color§return black§§
+§public§color()§[num:none|0,255] v1§mathutils.Color§return white to black§pbge.color( 127 )§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2§mathutils.Color§return white to black with transparency§pbge.color( 127, 200 )§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§mathutils.Color§return rgb§pbge.color( 255, 187, 0 )§
+§public§color()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3; [num:none|0,255] v4§mathutils.Color§return rgb with transparency§pbge.color( 255, 187, 0, 127 )§
+§public§getColor()§[blender object:none] o§mathutils.Color§return blender object color; if no argument, return black§color = pbge.getColor( “mycube” )§
+§public§background()§…§-§set the scene background color (see color() for arguments)§pbge.background( 127 ), pbge.background( 0,255,0 ), etc §
+§public§ambient()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene ambient color§pbge.ambient( 0,255,0 )§NOT WORKING IN BGE
+§public§mist()§[num:none|0,255] v1; [num:none|0,255] v2; [num:none|0,255] v3§-§set the scene mist color§pbge.mist( 0,255,0 )§NOT WORKING IN BGE
+§public§changeColor()§[blender object:none] o, …§-§set the blender object color (see color() for arguments)§pbge.changeColor( myobject, 255, 255, 255 )§
+§public§changeColor()§[string:none] o, …§-§set the blender object color (see color() for arguments)§pbge.changeColor( “myobjectname”, 255, 255, 255 )§
+blender objects' getters§§§§§§§
+§public§orientation()§[blender object:none] o§mathutils.Matrix§return global orientation of the blender object§orientation = pbge.orientation( myobject )§
+§public§orientation()§[string:none] o§mathutils.Matrix§return global orientation of the blender object§orientation = pbge.orientation( “myobjectname” )§
+§public§orientation()§[blender object:none] o; [boolean:True] absolute§mathutils.Matrix§return global (absolute) or local orientation of the blender object§orientation = pbge.orientation( myobject, False )§
+§public§orientation()§[string:none] o; [boolean:True] absolute§mathutils.Matrix§return global (absolute) or local orientation of the blender object§orientation = pbge.orientation( “myobjectname”, False )§
+§public§position()§[blender object:none] o§mathutils.Vector§return global position of the blender object§orientation = pbge.position( myobject )§
+§public§position()§[string:none] o§mathutils.Vector§return global position of the blender object§orientation = pbge.position( “myobjectname” )§
+§public§position()§[blender object:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local position of the blender object§orientation = pbge.position( myobject, False )§
+§public§position()§[string:none] o; [boolean:True] absolute§mathutils.Vector§return global (absolute) or local position of the blender object§orientation = pbge.position( “myobjectname”, False )§
+§public§dimension()§-§-§return 3D dimensions of the blender object§§NOT YET IMPLEMENTED
+text§§§§§§§
+§public§textColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb text color§pbge.textColor( 255,0,0 )§
+§public§textColor()§[mathutils.Color:none] arg1§-§set text color§pbge.textColor( myobject.getColor() )§
+§public§textColor()§[mathutils.Vector:none] arg1§-§set text color§pbge.textColor( myobject.position() )§
+§public§textSize()§[num:none] size§-§set text size§pbge.textSize( 12 )§
+§public§text()§[string:none] text§-§draw a string in the 3D world at 0,0,0§pbge.text( “processingbge is running” )§
+§public§text()§[string:none] text; [mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draw a string in the 3D world, first vector will be used to set the position and second for rotation§pbge.text( “processingbge is running”, pbge.vector( 1,0,0 ), pbge.vector( 0,0,45 ) )§
+§public§text()§[string:none] text; [blender object:none] arg1; [mathutils.Vector:none] arg2; [mathutils.Vector:none] arg3§-§draw a string in the 3D world, object position and first vector will be merged to set the position and second for rotation§pbge.text( myobject.name, myobject, pbge.vector( 1,0,0 ), pbge.vector( 0,0,45 ) )§
+§public§info()§[string:none] text§-§draw a string relatively to viewport§pbge.info( “processingbge is running” )§
+§public§info()§[string:none] text; [mathutils.Vector:none] arg1§-§draw a string relatively to viewport, first vector will be used to set the position §pbge.info( “processingbge is running”, pbge.vector( 10,10,0 ) )§
+§public§info()§[string:none] text; [num:none] arg1; [num:none] y; [num:none] z§-§draw a string relatively to viewport, arguments will be used to set the position§pbge.info( “processingbge is running”, 10,10,0 )§
+basic draw§§§§§§§
+§public§lineColor()§[num:none|0,255] arg1; [num:none|0,255] arg2; [num:none|0,255] arg3§-§set rgb line color§pbge.lineColor( 255,0,0 )§
+§public§lineColor()§[mathutils.Color:none] arg1§-§set line color§pbge.lineColor( myobject.getColor() )§
+§public§lineColor()§[mathutils.Vector:none] arg1§-§set line color§pbge.lineColor( myobject.position() )§
+§public§line()§[mathutils.Vector:none] arg1; [mathutils.Vector:none] arg2§-§draws an opengl line between two positions§pbge.line( myobject.position(), otherobject.position() )§
+§public§line()§[mathutils.Vector:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4§-§draws an opengl line between two positions (arg2 = x, arg3 = y, arg4 = z)  §pbge.line( myobject.position(), 0,0,0 )§
+§public§line()§[num:none] arg1; [num:none] arg2; [num:none] arg3; [num:none] arg4; [num:none] arg5; [num:none] arg6§-§draws an opengl line between two positions (arg1 = x, arg2 = y, arg3 = z and arg4 = x, arg5 = y, arg6 = z)  §pbge.line( 0,0,0, 1,1,1 )§
+transformations§§§§§§§
+§public§scale()§[blender object:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§pbge.scale( myobject, 2 )§
+§public§scale()§[string:none] o; [num:none] value§-§set the blender object scale, uniform on the 3 axis§pbge.scale( “myobjectname”, 2 )§
+§public§scale()§[blender object:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§pbge.scale( myobject”, 2,1,1 )§
+§public§scale()§[string:none] o; [num:none] value; [num:none] optY; [num:none] optZ§-§set the blender object scale, differently on the 3 axis§pbge.scale( “myobjectname”, 2,1,1 )§
+§public§scaleX()§[blender object:none] o; [num:none] value§-§increase the blender object scale on X axis§pbge.scaleX( myobject, 2 )§
+§public§scaleX()§[string:none] o; [num:none] value§-§increase the blender object scale on X axis§pbge.scaleX( “myobjectname”, 2 )§
+§public§scaleY()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Y axis§pbge.scaleY( myobject, 2 )§
+§public§scaleY()§[string:none] o; [num:none] value§-§increase the blender object scale on Y axis§pbge.scaleY( “myobjectname”, 2 )§
+§public§scaleZ()§[blender object:none] o; [num:none] value§-§increase the blender object scale on Z axis§pbge.scaleZ( myobject, 2 )§
+§public§scaleZ()§[string:none] o; [num:none] value§-§increase the blender object scale on Z axis§pbge.scaleZ( “myobjectname”, 2 )§
+§public§moveTo()§[blender object:none] o; [num:none] arg1; [num:none] y; [num:none] z§-§move the blender object to the new position§pbge.moveTo( myobject, 0,0,0 )§
+§public§moveTo()§[string:none] o;[num:none] arg1; [num:none] y; [num:none] z§-§move the blender object to the new position§pbge.moveTo( “myobjectname”, 0,0,0 )§
+§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z§-§translate the blender object by x,y,z§pbge.move( myobject, 1,1,1 )§
+§public§move()§[string:none] o; [num:none] x; [num:none] y; [num:none] z§-§translate the blender object by x,y,z§pbge.move( “myobjectname”, 1,1,1 )§
+§public§move()§[blender object:none] o; [num:none] x; [num:none] y; [num:none] z; [boolean:True] absolute§-§translate the blender object by x,y,z using its local position if absolute is False§pbge.move( myobject, 1,1,1, False )§
+§public§move()§[string:none] o; [num:none] x; [num:none] y; [num:none] z; [boolean:True] absolute§-§translate the blender object by x,y,z using its local position if absolute is False§pbge.move( “myobjectname”, 1,1,1, False )§
+§public§moveX()§[blender object:none] o; [num:none] value§-§translate the blender object on x axis§pbge.moveX( myobject, 1 )§
+§public§moveX()§[string:none] o; [num:none] value§-§translate the blender object on x axis§pbge.moveX( “myobjectname”, 1 )§
+§public§moveX()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on x axis using its local position if absolute is False§pbge.moveX( myobject, 1, False )§
+§public§moveX()§[string:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on x axis using its local position if absolute is False§pbge.moveX( “myobjectname”, 1, False )§
+§public§moveY()§[blender object:none] o; [num:none] value§-§translate the blender object on y axis§pbge.moveY( myobject, 1 )§
+§public§moveY()§[string:none] o; [num:none] value§-§translate the blender object on y axis§pbge.moveY( “myobjectname”, 1 )§
+§public§moveY()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on y axis using its local position if absolute is False§pbge.moveY( myobject, 1, False )§
+§public§moveY()§[string:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on y axis using its local position if absolute is False§pbge.moveY( “myobjectname”, 1, False )§
+§public§moveZ()§[blender object:none] o; [num:none] value§-§translate the blender object on z axis§pbge.moveZ( myobject, 1 )§
+§public§moveZ()§[string:none] o; [num:none] value§-§translate the blender object on z axis§pbge.moveZ( “myobjectname”, 1 )§
+§public§moveZ()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on z axis using its local position if absolute is False§pbge.moveZ( myobject, 1, False )§
+§public§moveZ()§[string:none] o; [num:none] value; [boolean:True] absolute§-§translate the blender object on z axis using its local position if absolute is False§pbge.moveZ( “myobjectname”, 1, False )§
+§public§orient()§[blender object:none] o; [mathutils.Matrix:none] neworientation§-§replace the rotation of the object with the given vector§pbge.orient( myobject, otherobject.orientation() )§
+§public§orient()§[string:none] o; [mathutils.Matrix:none] neworientation§-§replace the rotation of the object with the given vector§pbge.orient( “myobjectname”, otherobject.orientation() )§
+§public§pointTo()§[blender object:none] o; [blender object:none] tracked§-§adapt the rotation of the object 'o' to point to the position of the 'tracked' object§pbge.pointTo( myobject, otherobject )§NOT YET FUNCTIONAL
+§public§pointTo()§[blender object:none] o; [string:none] tracked§-§adapt the rotation of the object 'o' to point to the position of the 'tracked' object§pbge.pointTo( myobject, “otherobjectname” )§NOT YET FUNCTIONAL
+§public§pointTo()§[string:none] o; [blender object:none] tracked§-§adapt the rotation of the object 'o' to point to the position of the 'tracked' object§pbge.pointTo(  “myobjectname”, otherobject )§NOT YET FUNCTIONAL
+§public§pointTo()§[string:none] o; [string:none] tracked§-§adapt the rotation of the object 'o' to point to the position of the 'tracked' object§pbge.pointTo(  “myobjectname”, “otherobjectname” )§NOT YET FUNCTIONAL
+§public§point()§[blender object:none] o§-§adapt the rotation of the object 'o' to point to the world origin§pbge.point( myobject )§NOT YET FUNCTIONAL
+§public§point()§[string:none] o§-§adapt the rotation of the object 'o' to point to the world origin§pbge.point( “myobjectname” )§NOT YET FUNCTIONAL
+§public§point()§[blender object:none] o; [num:0] x; [num:0] y; [num:0] z§-§adapt the rotation of the object 'o' to point to the specified x,y,z coordinates§pbge.point( myobject, 1,1,1 )§NOT YET FUNCTIONAL
+§public§point()§[string:none] o; [num:0] x; [num:0] y; [num:0] z§-§adapt the rotation of the object 'o' to point to the specified x,y,z coordinates§pbge.point( “myobjectname”, 1,1,1 )§NOT YET FUNCTIONAL
+§public§rotateX()§[blender object:none] o; [num:none] value§-§apply a rotation on x axis§pbge.rotateX( myobject, 5 )§
+§public§rotateX()§[string:none] o; [num:none] value§-§apply a rotation on x axis§pbge.rotateX( “myobjectname”, 5 )§
+§public§rotateX()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on x axis using local or global axis§pbge.rotateX( myobject, 5, False )§
+§public§rotateX()§[string:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on x axis using local or global axis§pbge.rotateX( “myobjectname”, 5, False )§
+§public§rotateY()§[blender object:none] o; [num:none] value§-§apply a rotation on y axis§pbge.rotateY( myobject, 5 )§
+§public§rotateY()§[string:none] o; [num:none] value§-§apply a rotation on y axis§pbge.rotateY( “myobjectname”, 5 )§
+§public§rotateY()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on y axis using local or global axis§pbge.rotateY( myobject, 5, False )§
+§public§rotateY()§[string:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on y axis using local or global axis§pbge.rotateY( “myobjectname”, 5, False )§
+§public§rotateZ()§[blender object:none] o; [num:none] value§-§apply a rotation on z axis§pbge.rotateZ( myobject, 5 )§
+§public§rotateZ()§[string:none] o; [num:none] value§-§apply a rotation on z axis§pbge.rotateZ( “myobjectname”, 5 )§
+§public§rotateZ()§[blender object:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on z axis using local or global axis§pbge.rotateZ( myobject, 5, False )§
+§public§rotateZ()§[string:none] o; [num:none] value; [boolean:True] absolute§-§apply a rotation on z axis using local or global axis§pbge.rotateZ( “myobjectname”, 5, False )§
+utils§§§§§§§
+§public§vector()§§mathutils.Vector§create a 3D vector at 0,0,0§newvector = pbge.vector()§
+§public§vector()§[num:none] x; [num:none] y; [num:none] z§mathutils.Vector§create a 3D vector§newvector = pbge.vector( 1,1.5,0 )§
+§public§createOscReceiver()§[int:0] port; [string:'/pbge'] marker§-§create a OSC receiver§§NOT YET IMPLEMENTED
+§public§isLowercase()§[char:none] char§boolean§test if the given character is lower or uppercase§§NOT YET IMPLEMENTED
+§public§char2lowercase()§[char:none] char§char§transform a char to lowercase (if it is uppercase)§§NOT YET IMPLEMENTED
+§public§char2ascii()§[char:none] char§signed int§transform a char to ascii, returns -1 if it fails§§
+§public§rgba2vector()§[num:255|0,255] r; [num:255|0,255] g; [num:255|0,255] b; [num:255|0,255] a§mathutils.Vector§turns the 4 color values into a 4 dimensions vector ready to use in blender world§§
+§public§rgb2vector()§[num:255|0,255] r; [num:255|0,255] g; [num:255|0,255] b§mathutils.Vector§turns the 3 color values into a 3 dimensions vector ready to use in blender world§§
+§public§prepareColor()§[num:none] c§float§validate that the given value is between 0 and 255, caps it if not and normalize it between 0 and 1§§
+§public§getScale()§[blender object:none] obj§mathutils.Vector§returns the scale of the object§§
+§public§applyOrientation()§[blender object:none] obj; [mathutils.Matrix:none] matorientation§-§apply the new orientation on the object§§
+§public§applyOrientation()§[blender object:none] obj; [mathutils.Matrix:none] matorientation; [boolean:True] absolute§-§apply the new orientation on the object, using local or global matrix§§
+§public§getPosition()§[blender object:none] obj§mathutils.Vector§returns the global position of the object §§
+§public§getPosition()§[blender object:none] obj; [boolean:True] absolute§mathutils.Vector§returns the local or global position of the object §§
+§public§getOrientation()§[blender object:none] obj§mathutils.Matrix§returns the global orientation of the object §§
+§public§getOrientation()§[blender object:none] obj; [boolean:True] absolute§mathutils.Matrix§returns the local or global orientation of the object §§
+§public§getGeneratedByName()§[string:none] name§blender object§find an object created in the scene via a “create*” method via its name, return 0 if name does not exist§§
+§public§getObjectName()§[blender object:none] obj§string§return object's name, return 0 if name does not exist§§
+§public§getObjectByName()§[string:none] name§blender object§find an object in all objects presents on the scene via its name, return 0 if name does not exist§§

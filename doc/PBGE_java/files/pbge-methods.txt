@@ -1,20 +1,40 @@
 <div class="methods_summary">
 <a name="methods_summary"></a>
-<div class="method_section">basics</div>
+<div class="method_section">core</div>
 <div class="method_anchor"><a href="#__init__">__init__()</a></div>
+<div class="method_anchor"><a href="#locateTemplates">locateTemplates()</a></div>
+<div class="method_anchor"><a href="#inputs">inputs()</a></div>
+<div class="method_anchor"><a href="#storeGeneratedRef">storeGeneratedRef()</a></div>
+<div class="method_anchor"><a href="#makeUnique">makeUnique()</a></div>
+<div class="method_section">globals</div>
+<div class="method_anchor"><a href="#PI">PI</a></div>
+<div class="method_anchor"><a href="#HALF_PI">HALF_PI</a></div>
+<div class="method_anchor"><a href="#TWO_PI">TWO_PI</a></div>
+<div class="method_anchor"><a href="#ARROW_UP">ARROW_UP</a></div>
+<div class="method_anchor"><a href="#ARROW_RIGHT">ARROW_RIGHT</a></div>
+<div class="method_anchor"><a href="#ARROW_DOWN">ARROW_DOWN</a></div>
+<div class="method_anchor"><a href="#ARROW_LEFT">ARROW_LEFT</a></div>
+<div class="method_anchor"><a href="#width">width</a></div>
+<div class="method_anchor"><a href="#height">height</a></div>
+<div class="method_anchor"><a href="#framecount">framecount</a></div>
+<div class="method_anchor"><a href="#mouseX">mouseX</a></div>
+<div class="method_anchor"><a href="#mouseY">mouseY</a></div>
+<div class="method_anchor"><a href="#scene">scene</a></div>
+<div class="method_anchor"><a href="#templates">templates</a></div>
+<div class="method_section">basics</div>
 <div class="method_anchor"><a href="#isconfigured">isconfigured()</a></div>
 <div class="method_anchor"><a href="#configure">configure()</a></div>
-<div class="method_anchor"><a href="#locateTemplates">locateTemplates()</a></div>
 <div class="method_anchor"><a href="#update">update()</a></div>
-<div class="method_anchor"><a href="#inputs">inputs()</a></div>
+<div class="method_anchor"><a href="#enableVerbose">enableVerbose()</a></div>
+<div class="method_anchor"><a href="#disableVerbose">disableVerbose()</a></div>
+<div class="method_anchor"><a href="#showMouse">showMouse()</a></div>
+<div class="method_anchor"><a href="#hideMouse">hideMouse()</a></div>
 <div class="method_section">interactions</div>
 <div class="method_anchor"><a href="#keyPressed">keyPressed()</a></div>
 <div class="method_anchor"><a href="#keyReleased">keyReleased()</a></div>
 <div class="method_anchor"><a href="#keyActive">keyActive()</a></div>
 <div class="method_anchor"><a href="#capsActive">capsActive()</a></div>
 <div class="method_section">creation</div>
-<div class="method_anchor"><a href="#storeGeneratedRef">storeGeneratedRef()</a></div>
-<div class="method_anchor"><a href="#makeUnique">makeUnique()</a></div>
 <div class="method_anchor"><a href="#createPlane">createPlane()</a></div>
 <div class="method_anchor"><a href="#createCube">createCube()</a></div>
 <div class="method_anchor"><a href="#createSphere">createSphere()</a></div>
@@ -36,14 +56,6 @@
 <div class="method_anchor"><a href="#orientation">orientation()</a></div>
 <div class="method_anchor"><a href="#position">position()</a></div>
 <div class="method_anchor"><a href="#dimension">dimension()</a></div>
-<div class="method_section">environment setters</div>
-<div class="method_anchor"><a href="#enableVerbose">enableVerbose()</a></div>
-<div class="method_anchor"><a href="#disableVerbose">disableVerbose()</a></div>
-<div class="method_anchor"><a href="#showMouse">showMouse()</a></div>
-<div class="method_anchor"><a href="#hideMouse">hideMouse()</a></div>
-<div class="method_section">delegates</div>
-<div class="method_anchor"><a href="#vector">vector()</a></div>
-<div class="method_anchor"><a href="#createOscReceiver">createOscReceiver()</a></div>
 <div class="method_section">text</div>
 <div class="method_anchor"><a href="#textColor">textColor()</a></div>
 <div class="method_anchor"><a href="#textSize">textSize()</a></div>
@@ -62,14 +74,98 @@
 <div class="method_anchor"><a href="#moveX">moveX()</a></div>
 <div class="method_anchor"><a href="#moveY">moveY()</a></div>
 <div class="method_anchor"><a href="#moveZ">moveZ()</a></div>
+<div class="method_anchor"><a href="#orient">orient()</a></div>
+<div class="method_anchor"><a href="#pointTo">pointTo()</a></div>
+<div class="method_anchor"><a href="#point">point()</a></div>
+<div class="method_anchor"><a href="#rotateX">rotateX()</a></div>
+<div class="method_anchor"><a href="#rotateY">rotateY()</a></div>
+<div class="method_anchor"><a href="#rotateZ">rotateZ()</a></div>
+<div class="method_section">utils</div>
+<div class="method_anchor"><a href="#vector">vector()</a></div>
+<div class="method_anchor"><a href="#createOscReceiver">createOscReceiver()</a></div>
+<div class="method_anchor"><a href="#isLowercase">isLowercase()</a></div>
+<div class="method_anchor"><a href="#char2lowercase">char2lowercase()</a></div>
+<div class="method_anchor"><a href="#char2ascii">char2ascii()</a></div>
+<div class="method_anchor"><a href="#rgba2vector">rgba2vector()</a></div>
+<div class="method_anchor"><a href="#rgb2vector">rgb2vector()</a></div>
+<div class="method_anchor"><a href="#prepareColor">prepareColor()</a></div>
+<div class="method_anchor"><a href="#getScale">getScale()</a></div>
+<div class="method_anchor"><a href="#applyOrientation">applyOrientation()</a></div>
+<div class="method_anchor"><a href="#getPosition">getPosition()</a></div>
+<div class="method_anchor"><a href="#getOrientation">getOrientation()</a></div>
+<div class="method_anchor"><a href="#getGeneratedByName">getGeneratedByName()</a></div>
+<div class="method_anchor"><a href="#getObjectName">getObjectName()</a></div>
+<div class="method_anchor"><a href="#getObjectByName">getObjectByName()</a></div>
 </div>
 <div class="methods_list">
 <div class="method">
-<a name="__init__"></a>
+<a name="ARROW_DOWN"></a>
 <div class="method_public">public</div>
+<div class="method_name">ARROW_DOWN</div>
+
+<div class="method_example">if ( pbge.keyActive( pbge.ARROW_DOWN ) ):</div>
+<div class="method_comments">the arrow down char</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="ARROW_LEFT"></a>
+<div class="method_public">public</div>
+<div class="method_name">ARROW_LEFT</div>
+
+<div class="method_example">if ( pbge.keyActive( pbge.ARROW_LEFT ) ):</div>
+<div class="method_comments">the arrow left char</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="ARROW_RIGHT"></a>
+<div class="method_public">public</div>
+<div class="method_name">ARROW_RIGHT</div>
+
+<div class="method_example">if ( pbge.keyActive( pbge.ARROW_RIGHT ) ):</div>
+<div class="method_comments">the arrow right char</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="ARROW_UP"></a>
+<div class="method_public">public</div>
+<div class="method_name">ARROW_UP</div>
+
+<div class="method_example">if ( pbge.keyActive( pbge.ARROW_UP ) ):</div>
+<div class="method_comments">the arrow up char</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="HALF_PI"></a>
+<div class="method_public">public</div>
+<div class="method_name">HALF_PI</div>
+
+<div class="method_example">pbge.HALF_PI</div>
+<div class="method_comments">half of PI</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="PI"></a>
+<div class="method_public">public</div>
+<div class="method_name">PI</div>
+
+<div class="method_example">pbge.PI</div>
+<div class="method_comments">the number PI</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="TWO_PI"></a>
+<div class="method_public">public</div>
+<div class="method_name">TWO_PI</div>
+
+<div class="method_example">pbge.TWO_PI</div>
+<div class="method_comments">two times PI</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="__init__"></a>
+<div class="method_private">private</div>
 <div class="method_name">__init__()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">constructor</div>
@@ -79,31 +175,33 @@
 <a name="ambient"></a>
 <div class="method_public">public</div>
 <div class="method_name">ambient()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v3</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.ambient( 0,255,0 )</div>
 <div class="method_comments">set the scene ambient color</div>
 <div class="method_important">NOT WORKING IN BGE</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="applyOrientation"></a>
+<div class="method_public">public</div>
+<div class="method_name">applyOrientation()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr><tr><td>matorientation</td><td>mathutils.Matrix</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_comments">apply the new orientation on the object</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr><tr><td>matorientation</td><td>mathutils.Matrix</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_comments">apply the new orientation on the object, using local or global matrix</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="background"></a>
 <div class="method_public">public</div>
 <div class="method_name">background()</div>
-<div class="method_arguments">
-…
+<div class="method_arguments">…
 </div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.background( 127 ), pbge.background( 0,255,0 ), etc </div>
 <div class="method_comments">set the scene background color (see color() for arguments)</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -111,15 +209,10 @@
 <a name="capsActive"></a>
 <div class="method_public">public</div>
 <div class="method_name">capsActive()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>char</td><td>char</td><td>none</td></tr>
-</table>
+<div class="method_arguments">-
 </div>
 <div class="method_return">boolean</div>
+<div class="method_example">if ( pbge.capsActive() ):</div>
 <div class="method_comments">return true if cap key is currently pressed</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -127,88 +220,57 @@
 <a name="changeColor"></a>
 <div class="method_public">public</div>
 <div class="method_name">changeColor()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o, …</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o, …</td><td>blender object</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.changeColor( myobject, 255, 255, 255 )</div>
 <div class="method_comments">set the blender object color (see color() for arguments)</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o, …</td><td>string</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o, …</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.changeColor( “myobjectname”, 255, 255, 255 )</div>
 <div class="method_comments">set the blender object color (see color() for arguments)</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="char2ascii"></a>
+<div class="method_public">public</div>
+<div class="method_name">char2ascii()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
+<div class="method_return">signed int</div>
+<div class="method_comments">transform a char to ascii, returns -1 if it fails</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="char2lowercase"></a>
+<div class="method_public">public</div>
+<div class="method_name">char2lowercase()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
+<div class="method_return">char</div>
+<div class="method_comments">transform a char to lowercase (if it is uppercase)</div>
+<div class="method_important">NOT YET IMPLEMENTED</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="color"></a>
 <div class="method_public">public</div>
 <div class="method_name">color()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">mathutils.Color</div>
 <div class="method_comments">return black</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">mathutils.Color</div>
+<div class="method_example">pbge.color( 127 )</div>
 <div class="method_comments">return white to black</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v2</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">mathutils.Color</div>
+<div class="method_example">pbge.color( 127, 200 )</div>
 <div class="method_comments">return white to black with transparency</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v3</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">mathutils.Color</div>
+<div class="method_example">pbge.color( 255, 187, 0 )</div>
 <div class="method_comments">return rgb</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v4</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v3</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v4</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">mathutils.Color</div>
+<div class="method_example">pbge.color( 255, 187, 0, 127 )</div>
 <div class="method_comments">return rgb with transparency</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -216,20 +278,12 @@
 <a name="configure"></a>
 <div class="method_public">public</div>
 <div class="method_name">configure()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">-</div>
 <div class="method_comments">called one time once the game engine is started </div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>verbose</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>verbose</td><td>boolean</td><td>True</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.configure( False )</div>
 <div class="method_comments">called one time once the game engine is started </div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -237,230 +291,93 @@
 <a name="createCircle"></a>
 <div class="method_public">public</div>
 <div class="method_name">createCircle()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new circle to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createCircle( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new circle to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new circle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createCircle( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new circle to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createCube"></a>
 <div class="method_public">public</div>
 <div class="method_name">createCube()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new cube to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createCube( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new cube to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cube to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createCube( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new cube to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createCylinder"></a>
 <div class="method_public">public</div>
 <div class="method_name">createCylinder()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new cylinder to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createCylinder( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new cylinder to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new cylinder to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createCylinder( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new cylinder to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createEmpty"></a>
 <div class="method_public">public</div>
 <div class="method_name">createEmpty()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new empty to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createEmpty( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new empty to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new empty to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createEmpty( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new empty to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createFromTemplate"></a>
 <div class="method_public">public</div>
 <div class="method_name">createFromTemplate()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>name</td><td>string</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>name</td><td>string</td><td>none</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createFromTemplate( “mytemplateobject” )</div>
+<div class="method_comments">add a new object based on the specified template to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>name</td><td>string</td><td>none</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createFromTemplate( “mytemplateobject”, -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new object based on the specified template to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new object to the scene, based on the name given, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createFromTemplate( “mytemplateobject”, -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new object based on the specified template to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createOscReceiver"></a>
 <div class="method_public">public</div>
 <div class="method_name">createOscReceiver()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>port</td><td>int</td><td>0</td></tr>
-<tr>
-<td>marker</td><td>string</td><td>'/pbge'</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>port</td><td>int</td><td>0</td></tr><tr><td>marker</td><td>string</td><td>'/pbge'</td></tr></table></div>
 <div class="method_return">-</div>
 <div class="method_comments">create a OSC receiver</div>
 <div class="method_important">NOT YET IMPLEMENTED</div>
@@ -470,220 +387,94 @@
 <a name="createPlane"></a>
 <div class="method_public">public</div>
 <div class="method_name">createPlane()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new plane to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createPlane( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new plane to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new plane to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createPlane( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new plane to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createSphere"></a>
 <div class="method_public">public</div>
 <div class="method_name">createSphere()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new sphere to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createSphere( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new sphere to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new sphere to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createSphere( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new sphere to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createSpot"></a>
 <div class="method_public">public</div>
 <div class="method_name">createSpot()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new spotlight to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createSpot( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new spotlight to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new spot to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createSpot( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new spotlight to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createSquare"></a>
 <div class="method_public">public</div>
 <div class="method_name">createSquare()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new square to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createSquare( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new square to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new square to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createSquare( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new square to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="createTriangle"></a>
 <div class="method_public">public</div>
 <div class="method_name">createTriangle()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_comments">add a new triangle to the scene at position (0,0,0), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>0</td></tr>
-<tr>
-<td>y</td><td>number</td><td>0</td></tr>
-<tr>
-<td>z</td><td>number</td><td>0</td></tr>
-<tr>
-<td>time2live</td><td>number</td><td>0</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.createTriangle( -1.2, -0.5, 1 )</div>
+<div class="method_comments">add a new triangle to the scene at position (x,y,z), returns 0 if the template is not found during configure</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr><tr><td>time2live</td><td>number</td><td>0</td></tr></table></div>
 <div class="method_return">blender object</div>
-<div class="method_comments">add a new triangle to the scene, returns 0 if the template is not found during configure</div>
+<div class="method_example">pbge.createTriangle( -1.2, -0.5, 1, 300 )</div>
+<div class="method_comments">add a new triangle to the scene at position (x,y,z) and specify the number of frames the object will stay in the scene, returns 0 if the template is not found during configure</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="dimension"></a>
 <div class="method_public">public</div>
 <div class="method_name">dimension()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-</table>
+<div class="method_arguments">-
 </div>
-<div class="method_return">mathutils.Vector</div>
+<div class="method_return">-</div>
 <div class="method_comments">return 3D dimensions of the blender object</div>
 <div class="method_important">NOT YET IMPLEMENTED</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
@@ -692,8 +483,7 @@
 <a name="disableVerbose"></a>
 <div class="method_public">public</div>
 <div class="method_name">disableVerbose()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">disable verbose mode</div>
@@ -703,35 +493,105 @@
 <a name="enableVerbose"></a>
 <div class="method_public">public</div>
 <div class="method_name">enableVerbose()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">enable verbose mode</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
+<a name="framecount"></a>
+<div class="method_public">public</div>
+<div class="method_name">framecount</div>
+
+<div class="method_example">pbge.framecount</div>
+<div class="method_comments">number of frames since the game started</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
 <a name="getColor"></a>
 <div class="method_public">public</div>
 <div class="method_name">getColor()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr></table></div>
 <div class="method_return">mathutils.Color</div>
+<div class="method_example">color = pbge.getColor( “mycube” )</div>
 <div class="method_comments">return blender object color; if no argument, return black</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getGeneratedByName"></a>
+<div class="method_public">public</div>
+<div class="method_name">getGeneratedByName()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">blender object</div>
+<div class="method_comments">find an object created in the scene via a “create*” method via its name, return 0 if name does not exist</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getObjectByName"></a>
+<div class="method_public">public</div>
+<div class="method_name">getObjectByName()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">blender object</div>
+<div class="method_comments">find an object in all objects presents on the scene via its name, return 0 if name does not exist</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getObjectName"></a>
+<div class="method_public">public</div>
+<div class="method_name">getObjectName()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">string</div>
+<div class="method_comments">return object's name, return 0 if name does not exist</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getOrientation"></a>
+<div class="method_public">public</div>
+<div class="method_name">getOrientation()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_comments">returns the global orientation of the object </div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_comments">returns the local or global orientation of the object </div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getPosition"></a>
+<div class="method_public">public</div>
+<div class="method_name">getPosition()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">returns the global position of the object </div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">returns the local or global position of the object </div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="getScale"></a>
+<div class="method_public">public</div>
+<div class="method_name">getScale()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>obj</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">returns the scale of the object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="height"></a>
+<div class="method_public">public</div>
+<div class="method_name">height</div>
+
+<div class="method_example">pbge.height</div>
+<div class="method_comments">viewport height</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="hideMouse"></a>
 <div class="method_public">public</div>
 <div class="method_name">hideMouse()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">hide mouse pointer when game engine is on</div>
@@ -741,43 +601,17 @@
 <a name="info"></a>
 <div class="method_public">public</div>
 <div class="method_name">info()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.info( “processingbge is running” )</div>
 <div class="method_comments">draw a string relatively to viewport</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.info( “processingbge is running”, pbge.vector( 10,10,0 ) )</div>
 <div class="method_comments">draw a string relatively to viewport, first vector will be used to set the position </div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>number</td><td>none</td></tr>
-<tr>
-<td>y</td><td>number</td><td>none</td></tr>
-<tr>
-<td>z</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr><tr><td>arg1</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.info( “processingbge is running”, 10,10,0 )</div>
 <div class="method_comments">draw a string relatively to viewport, arguments will be used to set the position</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -785,21 +619,30 @@
 <a name="inputs"></a>
 <div class="method_private">private</div>
 <div class="method_name">inputs()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">called by update(), gather mouse and keyboard events</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
+<a name="isLowercase"></a>
+<div class="method_public">public</div>
+<div class="method_name">isLowercase()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
+<div class="method_return">boolean</div>
+<div class="method_comments">test if the given character is lower or uppercase</div>
+<div class="method_important">NOT YET IMPLEMENTED</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
 <a name="isconfigured"></a>
 <div class="method_public">public</div>
 <div class="method_name">isconfigured()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">boolean</div>
+<div class="method_example">if ( pbge.isconfigured() ):</div>
 <div class="method_comments">return true if object has been successfully configured</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -807,15 +650,9 @@
 <a name="keyActive"></a>
 <div class="method_public">public</div>
 <div class="method_name">keyActive()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>char</td><td>char</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
 <div class="method_return">boolean</div>
+<div class="method_example">if ( pbge.keyActive( 'a' ) ):</div>
 <div class="method_comments">return true if key is currently pressed</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -823,15 +660,9 @@
 <a name="keyPressed"></a>
 <div class="method_public">public</div>
 <div class="method_name">keyPressed()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>char</td><td>char</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
 <div class="method_return">boolean</div>
+<div class="method_example">if ( pbge.keyPressed( 'a' ) ):</div>
 <div class="method_comments">return true if key has just been pressed</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -839,15 +670,9 @@
 <a name="keyReleased"></a>
 <div class="method_public">public</div>
 <div class="method_name">keyReleased()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>char</td><td>char</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>char</td><td>char</td><td>none</td></tr></table></div>
 <div class="method_return">boolean</div>
+<div class="method_example">if ( pbge.keyReleased( 'a' ) ):</div>
 <div class="method_comments">return true if key has just been released</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -855,53 +680,17 @@
 <a name="line"></a>
 <div class="method_public">public</div>
 <div class="method_name">line()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-<tr>
-<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr><tr><td>arg2</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.line( myobject.position(), otherobject.position() )</div>
 <div class="method_comments">draws an opengl line between two positions</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-<tr>
-<td>arg2</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg3</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg4</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr><tr><td>arg2</td><td>number</td><td>none</td></tr><tr><td>arg3</td><td>number</td><td>none</td></tr><tr><td>arg4</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.line( myobject.position(), 0,0,0 )</div>
 <div class="method_comments">draws an opengl line between two positions (arg2 = x, arg3 = y, arg4 = z)  </div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg2</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg3</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg4</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg5</td><td>number</td><td>none</td></tr>
-<tr>
-<td>arg6</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>number</td><td>none</td></tr><tr><td>arg2</td><td>number</td><td>none</td></tr><tr><td>arg3</td><td>number</td><td>none</td></tr><tr><td>arg4</td><td>number</td><td>none</td></tr><tr><td>arg5</td><td>number</td><td>none</td></tr><tr><td>arg6</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.line( 0,0,0, 1,1,1 )</div>
 <div class="method_comments">draws an opengl line between two positions (arg1 = x, arg2 = y, arg3 = z and arg4 = x, arg5 = y, arg6 = z)  </div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -909,39 +698,17 @@
 <a name="lineColor"></a>
 <div class="method_public">public</div>
 <div class="method_name">lineColor()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.lineColor( 255,0,0 )</div>
 <div class="method_comments">set rgb line color</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Color</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Color</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.lineColor( myobject.getColor() )</div>
 <div class="method_comments">set line color</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.lineColor( myobject.position() )</div>
 <div class="method_comments">set line color</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -949,8 +716,7 @@
 <a name="locateTemplates"></a>
 <div class="method_private">private</div>
 <div class="method_name">locateTemplates()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">called by configure(), seek and load default and user defined objects</div>
@@ -960,15 +726,9 @@
 <a name="makeUnique"></a>
 <div class="method_private">private</div>
 <div class="method_name">makeUnique()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>name</td><td>string</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>name</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">string</div>
+<div class="method_example">pbge.makeUnique( 'objectname' )</div>
 <div class="method_comments">called by storeGeneratedRef(), generate a unique name and return it, returns 0 if name is already unique</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -976,60 +736,50 @@
 <a name="mist"></a>
 <div class="method_public">public</div>
 <div class="method_name">mist()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>v1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>v3</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>v1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>v3</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.mist( 0,255,0 )</div>
 <div class="method_comments">set the scene mist color</div>
 <div class="method_important">NOT WORKING IN BGE</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="mouseX"></a>
+<div class="method_public">public</div>
+<div class="method_name">mouseX</div>
+
+<div class="method_example">pbge.mouseX</div>
+<div class="method_comments">x position of the mouse relative to viewport ( normalized )</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="mouseY"></a>
+<div class="method_public">public</div>
+<div class="method_name">mouseY</div>
+
+<div class="method_example">pbge.mouseY</div>
+<div class="method_comments">y position of the mouse relative to viewport ( normalized )</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="move"></a>
 <div class="method_public">public</div>
 <div class="method_name">move()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>x</td><td>number</td><td>none</td></tr>
-<tr>
-<td>y</td><td>number</td><td>none</td></tr>
-<tr>
-<td>z</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>x</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.move( myobject, 1,1,1 )</div>
 <div class="method_comments">translate the blender object by x,y,z</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>x</td><td>number</td><td>none</td></tr>
-<tr>
-<td>y</td><td>number</td><td>none</td></tr>
-<tr>
-<td>z</td><td>number</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>x</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.move( “myobjectname”, 1,1,1 )</div>
+<div class="method_comments">translate the blender object by x,y,z</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>x</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.move( myobject, 1,1,1, False )</div>
+<div class="method_comments">translate the blender object by x,y,z using its local position if absolute is False</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>x</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.move( “myobjectname”, 1,1,1, False )</div>
 <div class="method_comments">translate the blender object by x,y,z using its local position if absolute is False</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1037,33 +787,13 @@
 <a name="moveTo"></a>
 <div class="method_public">public</div>
 <div class="method_name">moveTo()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>arg1</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
-<div class="method_comments">move the blender object 'o' the location of the object 'arg1w'</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>number</td><td>none</td></tr>
-<tr>
-<td>y</td><td>number</td><td>none</td></tr>
-<tr>
-<td>z</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_example">pbge.moveTo( myobject, 0,0,0 )</div>
+<div class="method_comments">move the blender object to the new position</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>arg1</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveTo( “myobjectname”, 0,0,0 )</div>
 <div class="method_comments">move the blender object to the new position</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1071,31 +801,21 @@
 <a name="moveX"></a>
 <div class="method_public">public</div>
 <div class="method_name">moveX()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveX( myobject, 1 )</div>
 <div class="method_comments">translate the blender object on x axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveX( “myobjectname”, 1 )</div>
+<div class="method_comments">translate the blender object on x axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveX( myobject, 1, False )</div>
+<div class="method_comments">translate the blender object on x axis using its local position if absolute is False</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveX( “myobjectname”, 1, False )</div>
 <div class="method_comments">translate the blender object on x axis using its local position if absolute is False</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1103,31 +823,21 @@
 <a name="moveY"></a>
 <div class="method_public">public</div>
 <div class="method_name">moveY()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveY( myobject, 1 )</div>
 <div class="method_comments">translate the blender object on y axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveY( “myobjectname”, 1 )</div>
+<div class="method_comments">translate the blender object on y axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveY( myobject, 1, False )</div>
+<div class="method_comments">translate the blender object on y axis using its local position if absolute is False</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveY( “myobjectname”, 1, False )</div>
 <div class="method_comments">translate the blender object on y axis using its local position if absolute is False</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1135,149 +845,246 @@
 <a name="moveZ"></a>
 <div class="method_public">public</div>
 <div class="method_name">moveZ()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveZ( myobject, 1 )</div>
 <div class="method_comments">translate the blender object on z axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.moveZ( “myobjectname”, 1 )</div>
+<div class="method_comments">translate the blender object on z axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveZ( myobject, 1, False )</div>
 <div class="method_comments">translate the blender object on z axis using its local position if absolute is False</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.moveZ( “myobjectname”, 1, False )</div>
+<div class="method_comments">translate the blender object on z axis using its local position if absolute is False</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="orient"></a>
+<div class="method_public">public</div>
+<div class="method_name">orient()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>neworientation</td><td>mathutils.Matrix</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.orient( myobject, otherobject.orientation() )</div>
+<div class="method_comments">replace the rotation of the object with the given vector</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>neworientation</td><td>mathutils.Matrix</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.orient( “myobjectname”, otherobject.orientation() )</div>
+<div class="method_comments">replace the rotation of the object with the given vector</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="orientation"></a>
 <div class="method_public">public</div>
 <div class="method_name">orientation()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
-<div class="method_return">mathutils.Vector</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_example">orientation = pbge.orientation( myobject )</div>
 <div class="method_comments">return global orientation of the blender object</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
-<div class="method_return">mathutils.Vector</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_example">orientation = pbge.orientation( “myobjectname” )</div>
+<div class="method_comments">return global orientation of the blender object</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_example">orientation = pbge.orientation( myobject, False )</div>
 <div class="method_comments">return global (absolute) or local orientation of the blender object</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Matrix</div>
+<div class="method_example">orientation = pbge.orientation( “myobjectname”, False )</div>
+<div class="method_comments">return global (absolute) or local orientation of the blender object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="point"></a>
+<div class="method_public">public</div>
+<div class="method_name">point()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.point( myobject )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the world origin</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.point( “myobjectname” )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the world origin</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.point( myobject, 1,1,1 )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the specified x,y,z coordinates</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>x</td><td>number</td><td>0</td></tr><tr><td>y</td><td>number</td><td>0</td></tr><tr><td>z</td><td>number</td><td>0</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.point( “myobjectname”, 1,1,1 )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the specified x,y,z coordinates</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="pointTo"></a>
+<div class="method_public">public</div>
+<div class="method_name">pointTo()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>tracked</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.pointTo( myobject, otherobject )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the position of the 'tracked' object</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>tracked</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.pointTo( myobject, “otherobjectname” )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the position of the 'tracked' object</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>tracked</td><td>blender object</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.pointTo(  “myobjectname”, otherobject )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the position of the 'tracked' object</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>tracked</td><td>string</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.pointTo(  “myobjectname”, “otherobjectname” )</div>
+<div class="method_comments">adapt the rotation of the object 'o' to point to the position of the 'tracked' object</div>
+<div class="method_important">NOT YET FUNCTIONAL</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="position"></a>
 <div class="method_public">public</div>
 <div class="method_name">position()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr></table></div>
 <div class="method_return">mathutils.Vector</div>
+<div class="method_example">orientation = pbge.position( myobject )</div>
 <div class="method_comments">return global position of the blender object</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>absolute</td><td>boolean</td><td>True</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">mathutils.Vector</div>
+<div class="method_example">orientation = pbge.position( “myobjectname” )</div>
+<div class="method_comments">return global position of the blender object</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_example">orientation = pbge.position( myobject, False )</div>
 <div class="method_comments">return global (absolute) or local position of the blender object</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_example">orientation = pbge.position( “myobjectname”, False )</div>
+<div class="method_comments">return global (absolute) or local position of the blender object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="prepareColor"></a>
+<div class="method_public">public</div>
+<div class="method_name">prepareColor()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>c</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">float</div>
+<div class="method_comments">validate that the given value is between 0 and 255, caps it if not and normalize it between 0 and 1</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="rgb2vector"></a>
+<div class="method_public">public</div>
+<div class="method_name">rgb2vector()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>r</td><td>number</td><td>255</td><td>0,255</td></tr><tr><td>g</td><td>number</td><td>255</td><td>0,255</td></tr><tr><td>b</td><td>number</td><td>255</td><td>0,255</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">turns the 3 color values into a 3 dimensions vector ready to use in blender world</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="rgba2vector"></a>
+<div class="method_public">public</div>
+<div class="method_name">rgba2vector()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>r</td><td>number</td><td>255</td><td>0,255</td></tr><tr><td>g</td><td>number</td><td>255</td><td>0,255</td></tr><tr><td>b</td><td>number</td><td>255</td><td>0,255</td></tr><tr><td>a</td><td>number</td><td>255</td><td>0,255</td></tr></table></div>
+<div class="method_return">mathutils.Vector</div>
+<div class="method_comments">turns the 4 color values into a 4 dimensions vector ready to use in blender world</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="rotateX"></a>
+<div class="method_public">public</div>
+<div class="method_name">rotateX()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateX( myobject, 5 )</div>
+<div class="method_comments">apply a rotation on x axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateX( “myobjectname”, 5 )</div>
+<div class="method_comments">apply a rotation on x axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateX( myobject, 5, False )</div>
+<div class="method_comments">apply a rotation on x axis using local or global axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateX( “myobjectname”, 5, False )</div>
+<div class="method_comments">apply a rotation on x axis using local or global axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="rotateY"></a>
+<div class="method_public">public</div>
+<div class="method_name">rotateY()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateY( myobject, 5 )</div>
+<div class="method_comments">apply a rotation on y axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateY( “myobjectname”, 5 )</div>
+<div class="method_comments">apply a rotation on y axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateY( myobject, 5, False )</div>
+<div class="method_comments">apply a rotation on y axis using local or global axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateY( “myobjectname”, 5, False )</div>
+<div class="method_comments">apply a rotation on y axis using local or global axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="rotateZ"></a>
+<div class="method_public">public</div>
+<div class="method_name">rotateZ()</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateZ( myobject, 5 )</div>
+<div class="method_comments">apply a rotation on z axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateZ( “myobjectname”, 5 )</div>
+<div class="method_comments">apply a rotation on z axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateZ( myobject, 5, False )</div>
+<div class="method_comments">apply a rotation on z axis using local or global axis</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>absolute</td><td>boolean</td><td>True</td></tr></table></div>
+<div class="method_return">-</div>
+<div class="method_example">pbge.rotateZ( “myobjectname”, 5, False )</div>
+<div class="method_comments">apply a rotation on z axis using local or global axis</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="scale"></a>
 <div class="method_public">public</div>
 <div class="method_name">scale()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scale( myobject, 2 )</div>
 <div class="method_comments">set the blender object scale, uniform on the 3 axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>string</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scale( “myobjectname”, 2 )</div>
 <div class="method_comments">set the blender object scale, uniform on the 3 axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-<tr>
-<td>optY</td><td>number</td><td>none</td></tr>
-<tr>
-<td>optZ</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>optY</td><td>number</td><td>none</td></tr><tr><td>optZ</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scale( myobject”, 2,1,1 )</div>
 <div class="method_comments">set the blender object scale, differently on the 3 axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>string</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-<tr>
-<td>optY</td><td>number</td><td>none</td></tr>
-<tr>
-<td>optZ</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr><tr><td>optY</td><td>number</td><td>none</td></tr><tr><td>optZ</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scale( “myobjectname”, 2,1,1 )</div>
 <div class="method_comments">set the blender object scale, differently on the 3 axis</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1285,29 +1092,13 @@
 <a name="scaleX"></a>
 <div class="method_public">public</div>
 <div class="method_name">scaleX()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleX( myobject, 2 )</div>
 <div class="method_comments">increase the blender object scale on X axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>string</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleX( “myobjectname”, 2 )</div>
 <div class="method_comments">increase the blender object scale on X axis</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1315,29 +1106,13 @@
 <a name="scaleY"></a>
 <div class="method_public">public</div>
 <div class="method_name">scaleY()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleY( myobject, 2 )</div>
 <div class="method_comments">increase the blender object scale on Y axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>string</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleY( “myobjectname”, 2 )</div>
 <div class="method_comments">increase the blender object scale on Y axis</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1345,38 +1120,30 @@
 <a name="scaleZ"></a>
 <div class="method_public">public</div>
 <div class="method_name">scaleZ()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleZ( myobject, 2 )</div>
 <div class="method_comments">increase the blender object scale on Z axis</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>string</td><td>none</td></tr>
-<tr>
-<td>value</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>string</td><td>none</td></tr><tr><td>value</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.scaleZ( “myobjectname”, 2 )</div>
 <div class="method_comments">increase the blender object scale on Z axis</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="scene"></a>
+<div class="method_public">public</div>
+<div class="method_name">scene</div>
+
+<div class="method_example">pbge.scene</div>
+<div class="method_comments">reference of the current blender scene</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="showMouse"></a>
 <div class="method_public">public</div>
 <div class="method_name">showMouse()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">show mouse pointer when game engine is on</div>
@@ -1386,61 +1153,35 @@
 <a name="storeGeneratedRef"></a>
 <div class="method_private">private</div>
 <div class="method_name">storeGeneratedRef()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>o</td><td>blender object</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>o</td><td>blender object</td><td>none</td></tr></table></div>
 <div class="method_return">string</div>
+<div class="method_example">pbge.storeGeneratedRef( mycopiedobject )</div>
 <div class="method_comments">store the relation between the unique name and the object</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="templates"></a>
+<div class="method_public">public</div>
+<div class="method_name">templates</div>
+
+<div class="method_comments">list of template objects, containing the models that will be used by all “create*” methods</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 <div class="method">
 <a name="text"></a>
 <div class="method_public">public</div>
 <div class="method_name">text()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.text( “processingbge is running” )</div>
 <div class="method_comments">draw a string in the 3D world at 0,0,0</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-<tr>
-<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr><tr><td>arg2</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.text( “processingbge is running”, pbge.vector( 1,0,0 ), pbge.vector( 0,0,45 ) )</div>
 <div class="method_comments">draw a string in the 3D world, first vector will be used to set the position and second for rotation</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>text</td><td>string</td><td>none</td></tr>
-<tr>
-<td>arg1</td><td>blender object</td><td>none</td></tr>
-<tr>
-<td>arg2</td><td>mathutils.Vector</td><td>none</td></tr>
-<tr>
-<td>arg3</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>text</td><td>string</td><td>none</td></tr><tr><td>arg1</td><td>blender object</td><td>none</td></tr><tr><td>arg2</td><td>mathutils.Vector</td><td>none</td></tr><tr><td>arg3</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.text( myobject.name, myobject, pbge.vector( 1,0,0 ), pbge.vector( 0,0,45 ) )</div>
 <div class="method_comments">draw a string in the 3D world, object position and first vector will be merged to set the position and second for rotation</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1448,39 +1189,17 @@
 <a name="textColor"></a>
 <div class="method_public">public</div>
 <div class="method_name">textColor()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td><td>range</td></tr>
-<tr>
-<td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr>
-<tr>
-<td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td><td>range</td></tr><tr><td>arg1</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>arg2</td><td>number</td><td>none</td><td>0,255</td></tr><tr><td>arg3</td><td>number</td><td>none</td><td>0,255</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.textColor( 255,0,0 )</div>
 <div class="method_comments">set rgb text color</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Color</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Color</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.textColor( myobject.getColor() )</div>
 <div class="method_comments">set text color</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>arg1</td><td>mathutils.Vector</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>arg1</td><td>mathutils.Vector</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.textColor( myobject.position() )</div>
 <div class="method_comments">set text color</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1488,15 +1207,9 @@
 <a name="textSize"></a>
 <div class="method_public">public</div>
 <div class="method_name">textSize()</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>size</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>size</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">-</div>
+<div class="method_example">pbge.textSize( 12 )</div>
 <div class="method_comments">set text size</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
@@ -1504,8 +1217,7 @@
 <a name="update"></a>
 <div class="method_public">public</div>
 <div class="method_name">update()</div>
-<div class="method_arguments">
--
+<div class="method_arguments">-
 </div>
 <div class="method_return">-</div>
 <div class="method_comments">called at each refresh, the method gathers inputs events & OSC messages</div>
@@ -1515,25 +1227,23 @@
 <a name="vector"></a>
 <div class="method_public">public</div>
 <div class="method_name">vector()</div>
-<div class="method_arguments">
 
-</div>
 <div class="method_return">mathutils.Vector</div>
+<div class="method_example">newvector = pbge.vector()</div>
 <div class="method_comments">create a 3D vector at 0,0,0</div>
-<div class="method_arguments">
-<table>
-<tr class="arguments_header">
-<td>name</td><td>type</td><td>default</td></tr>
-<tr>
-<td>x</td><td>number</td><td>none</td></tr>
-<tr>
-<td>y</td><td>number</td><td>none</td></tr>
-<tr>
-<td>z</td><td>number</td><td>none</td></tr>
-</table>
-</div>
+<div class="method_arguments"><table><tr class="arguments_header"><td>name</td><td>type</td><td>default</td></tr><tr><td>x</td><td>number</td><td>none</td></tr><tr><td>y</td><td>number</td><td>none</td></tr><tr><td>z</td><td>number</td><td>none</td></tr></table></div>
 <div class="method_return">mathutils.Vector</div>
+<div class="method_example">newvector = pbge.vector( 1,1.5,0 )</div>
 <div class="method_comments">create a 3D vector</div>
+<div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
+</div>
+<div class="method">
+<a name="width"></a>
+<div class="method_public">public</div>
+<div class="method_name">width</div>
+
+<div class="method_example">pbge.width</div>
+<div class="method_comments">viewport width</div>
 <div class="backtosummary"><a href="#methods_summary">back to summary</a></div>
 </div>
 </div>
