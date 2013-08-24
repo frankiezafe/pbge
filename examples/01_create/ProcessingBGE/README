@@ -1,0 +1,26 @@
+ProcessingBGE's purpose is to simplify the use of the blender game engine python API.
+
+HOW TO:
+*******
+
+* Basic:
+********
+To start a new "problender" project, just copy/paste the folder "problender" and rename the folder and "processing.blend" (not required)
+
+* Advanced:
+***********
+If you don't want to use the problender template, the setup is a bit more complex.
+
+** 1.
+ProcessigBGE requires one scenes and two layers: an active layer and a "storage" layer
+When you call "configure" method, template object will be loaded from the storage layer via "Edit object" actuators
+You can add custom templates via the same process, the method to ducplicate them is(will) createFrom( [object name] ) 
+
+** 2.
+Last point: you'll have to call ProcessingBGE.configure() once, and ProcessingBGE.update() at each frame.
+
+
+
+
+06 May 2013
+Version 0.2
