@@ -1,0 +1,152 @@
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+2013 09 27
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+
+2.67 -> ok
+2.68a -> 
+- ajouter un bouton play
+	-> crée game logic
+	-> if pbge.isconfigured() == False:
+	-> ??? plane->square
+
+cacher les 
+
+doc -> remonter desc. des méthodes direct en-dessous du nom
+
+- ajouter "import bge" dans blender
+- lib osc crash dans 2.3
+- retirer les imports inutiles
+- problème -> il est possible d'overwriter les méthodes
+- moveTo ( obj1 -> obj2 )
+- mot-clé init >> setup
+
+-> aller voir pycessing
+ultra-simplification -> execfile
+
+
+
+//////////////////////////////////////////////////////////////////////////
+now:
+//////////////////////////////////////////////////////////////////////////
+
+# TO RUN : PUT YOUR MOUSE IN THE 3D VIEW AND PRESS 'p' 
+from ProcessingBGE.ProcessingBGE import ProcessingBGE as pbge
+import math
+import mathutils
+import random
+
+# called once
+def init():
+    scene = bge.logic.getCurrentScene()
+    scene.post_draw = [animate]
+    pbge.configure()
+    
+    # storing the reference of the created objects
+    # into 'pbge' to animate them later
+    pbge.myplane = pbge.createPlane( 0,0,-3 )
+    pbge.mycube = pbge.createCube( 0,2,0 )
+    pbge.mysphere = pbge.createSphere( 0,-2,0 )
+    pbge.mycylinder = pbge.createCylinder( 2,0,0 )
+    pbge.myspot = pbge.createSpot( 0,0,7 )
+    
+    pbge.scale( pbge.myplane, 10 )
+    pbge.scale( pbge.mycylinder, 0.3, 0.3, 4 )
+    pbge.scaleZ( pbge.mycube, 2 )
+    
+    pbge.getPosition( pbge.mycube ) = pbge.getPosition( pbge.myplane )
+    
+
+# called at each frame
+def animate():
+    pbge.update()
+    
+    # and rotation of objects
+    pbge.rotateZ( pbge.myplane, 0.001 )
+    pbge.rotateX( pbge.mycube, 0.01 )
+    pbge.rotateY( pbge.mysphere, 0.02 )
+    pbge.rotateY( pbge.mycylinder, 0.03 )
+    
+# always leave this at the bottom of the script!
+if pbge.isconfigured() == False:
+    init()
+
+//////////////////////////////////////////////////////////////////////////
+should be:
+//////////////////////////////////////////////////////////////////////////
+
+myplane = 0
+mycube = 0
+mysphere = 0
+mycylinder = 0
+myspot = 0
+
+def setup():
+	myplane = 	createPlane( 0,0,-3 )
+    	mycube = 	createCube( 0,2,0 )
+    	mysphere = 	createSphere( 0,-2,0 )
+    	mycylinder = 	createCylinder( 2,0,0 )
+    	myspot = 	createSpot( 0,0,7 )
+
+def draw():
+	myplane.rotateZ( 0.001 )
+	mycube.rotateX( 0.01 )
+	mysphere.rotateY( 0.02 )
+	mycylinder.rotateY( 0.03 )
+
+
+//////////////////////////////////////////////////////////////////////////
+true python:
+//////////////////////////////////////////////////////////////////////////
+
+def __inti(self)__:
+	self.myplane = 0
+	self.mycube = 0
+	self.mysphere = 0
+	self.mycylinder = 0
+	self.myspot = 0
+
+def setup(self):
+	self.myplane = 		self.createPlane( 0,0,-3 )
+    	self.mycube = 		self.createCube( 0,2,0 )
+    	self.mysphere = 	self.createSphere( 0,-2,0 )
+    	self.mycylinder = 	self.createCylinder( 2,0,0 )
+    	self.myspot = 		self.createSpot( 0,0,7 )
+
+def draw(self):
+	self.myplane.rotateZ( 0.001 )
+	self.mycube.rotateX( 0.01 )
+	self.mysphere.rotateY( 0.02 )
+	self.mycylinder.rotateY( 0.03 )
+
+
+//////////////////////////////////////////////////////////////////////////
+in between:
+//////////////////////////////////////////////////////////////////////////
+
+
+pbge.myplane = 0
+pbge.mycube = 0
+pbge.mysphere = 0
+pbge.mycylinder = 0
+pbge.myspot = 0
+
+def setup():
+	pbge.myplane = 		pbge.createPlane( 0,0,-3 )
+    	pbge.mycube = 		pbge.createCube( 0,2,0 )
+    	pbge.mysphere = 	pbge.createSphere( 0,-2,0 )
+    	pbge.mycylinder = 	pbge.createCylinder( 2,0,0 )
+    	pbge.myspot = 		pbge.createSpot( 0,0,7 )
+
+def draw():
+	pbge.myplane.rotateZ( 0.001 )
+	(or) pbge.rotateZ( pbge.myplane, 0.001 )
+	pbge.mycube.rotateX( 0.01 )
+	pbge.mysphere.rotateY( 0.02 )
+	pbge.mycylinder.rotateY( 0.03 )
+
+
+
+
